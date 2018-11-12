@@ -62,6 +62,7 @@
         var material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
         var cube = new THREE.Mesh( geometry, material );
         scene.add( cube );
+A cube, spheres, circles, rectangles, donuts and much more. 
         
   * Clicking objects?
   
