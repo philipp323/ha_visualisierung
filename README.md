@@ -51,7 +51,7 @@ Known Issues:
 
 School: HTL Leonding
 
-### To see the contributions to master, of each developer, check out [this graph.](https://github.com/philippAuinger/ha_visualisierung/graphs/contributors)
+#### To see the contributions to master, of each developer, check out [this graph.](https://github.com/philippAuinger/ha_visualisierung/graphs/contributors)
 
 ## :wrench: Build with:
 
