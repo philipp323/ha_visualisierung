@@ -21,11 +21,69 @@
 ## :rocket: Quickstart: 
 
 ### [three.js](https://threejs.org/)  
-
+  is a Javascript 3D library.
   [Download](https://github.com/mrdoob/three.js/) the needed .js files here.
   
   #### Basic Code Explanation:
-  Refering to our Code in three.js-Prototyp.
+  
+  * What do we need?
+  
+        <!DOCTYPE html>
+           <html>
+	             <head>
+                 <meta charset=utf-8>
+		               <title>My first three.js app</title>
+		               <style>
+			                 body { margin: 0; }
+			                 canvas { width: 100%; height: 100% }
+		               </style>
+	             </head>
+	             <body>
+		               <script src="js/three.js"></script>
+		               <script>
+			                 // Our Javascript will go here.
+		               </script>
+	             </body>
+          </html>
+          
+  * Important Things
+  
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 300);
+        var renderer = new THREE.WebGLRenderer();
+        var controls = new THREE.OrbitControls(camera, renderer.domElement);
+        
+        var amlight = new THREE.AmbientLight(0xffffff, 1);
+        (A light)
+        
+  * Structures
+    
+        var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+        var material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
+        var cube = new THREE.Mesh( geometry, material );
+        scene.add( cube );
+        
+  * Clicking objects?
+  
+        var raycaster = new THREE.Raycaster();
+        var YOUR_CLICKABLE_OBJECTS = [];
+        //Add some objects
+        
+        document.addEventListener('mousedown', onDocumentMouseDown, false);
+           function onDocumentMouseDown(event) {
+              event.preventDefault();
+              var mouseVector = new THREE.Vector3((event.clientX / window.innerWidth) * 2 - 1, 
+              -(event.clientY / window.innerHeight) * 2 + 1, 0.5);
+
+              raycaster.setFromCamera(mouseVector, camera);
+              var intersects = raycaster.intersectObjects(YOUR_CLICKABLE_OBJECTS);
+              if (intersects.length > 0) {
+                 //Do something with the objects.
+              }
+        }
+        
+More information in our code, and the three.js Documentation.
+Refering to our Code in three.js-Prototyp.
 
 ### [aframe](https://aframe.io/)
   
