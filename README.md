@@ -3,16 +3,11 @@
 ## :clipboard: Table of Contents
 - [Introduction](#arrow_forward-introduction)
 - [Quickstart](#rocket-quickstart)
-- [Site-List](#mag_right-site-list)
-- [Feature-List](#memo-feature-list)
 - [Change-Log](#floppy_disk-change-log)
 - [Documentation](#page_facing_up-documentation)
 - [Testing](#microscope-testing)
-  - Testing-Documents
-  - Known Issues
 - [Contributing](#chart_with_upwards_trend-contributing)
 - [Build with](#wrench-build-with)
-- [Links](#link-links)
 - [License](#lock-license)
 
 ## :arrow_forward: Introduction
@@ -26,7 +21,11 @@
 
 - [three.js](https://threejs.org/)  
 
+  //me
+
 - [aframe](https://aframe.io/)
+  
+  //Nenad! lets goooooo!
 
 ## :floppy_disk: Change-Log:
 
@@ -41,7 +40,7 @@ Project Documents:
 Browser: FireFox Quantum 60.0.2
 
 Known Issues:
-  - Placement of objects (a lot of work)
+  - Placement of objects (three.js, a lot of work)
 
 ## :chart_with_upwards_trend: Contributing:
 
@@ -61,10 +60,6 @@ School: HTL Leonding
 - HTML5
 - CSS
 - JavaScript
-
-## :link: Links:
-- [Materialize](https://materializecss.com)
-  - [Github](https://github.com/Dogfalo/materialize)
 
 
 ## :lock: License:
