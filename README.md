@@ -12,18 +12,19 @@
 
 ## :arrow_forward: Introduction
 
- ha_visualisation (House-Automation-Visualisation) is a project to improve the overview and accessability by showing the right    information on the right position.
+ ha_visualisation (House-Automation-Visualisation) is a project to improve the overview and accessability by showing the right    information on the right position.  
+ 
  Developed with three.js and a-frame.
  
  This Prototype (v0.1) **isn't** a final version 
 
 ## :rocket: Quickstart: 
 
-- [three.js](https://threejs.org/)  
+### [three.js](https://threejs.org/)  
 
   //me
 
-- [aframe](https://aframe.io/)
+### [aframe](https://aframe.io/)
   
   //Nenad! lets goooooo!
 
@@ -50,7 +51,7 @@ Known Issues:
 
 School: HTL Leonding
 
-### To see the contributions to master, of each developer, check out [this graph.](https://github.com/philippAuinger/ha_visualisierung/graphs/contributors)
+#### To see the contributions to master, of each developer, check out [this graph.](https://github.com/philippAuinger/ha_visualisierung/graphs/contributors)
 
 ## :wrench: Build with:
 
