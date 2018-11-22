@@ -3,4 +3,4 @@
 #
 #### Thimble
 
-For the newest version see [INDEX.html] (https://github.com/philippAuinger/ha_visualisierung/blob/master/a-frame%20Prototype/index.html)
+For the newest version see [INDEX](https://github.com/philippAuinger/ha_visualisierung/blob/master/a-frame%20Prototype/index.html)
