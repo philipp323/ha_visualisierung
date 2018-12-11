@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="door" src="door.jpg"/>
+      </a-assets>
+      
+      <a-plane position="0 0 -1" rotation="-90 0 0" width="4" height="4" color="#4f8f71"></a-plane>
+
+      <!-- Raum E72 -->
+      
+      <!-- Vordere Wand -->
+      <a-box position="0 0 0" color="#738e9a" width="5" height="2" depth="0.1"></a-box>
+      <!-- Vordere Wand -->
+      
+      <!-- hintere Wand -->
+      <a-box position="0 0 -10" color="#738e9a" width="5" height="2" depth="0.1"></a-box>
+      <!-- hintere Wand -->
+      
+      <!-- Rechte Wand -->
+      <a-box position="2.5 0 -2.5" rotation="0 90 0" color="#738e9a" width="5" height="2" depth="0.1"></a-box>
+      <a-box position="2.5 0 -8" rotation="0 90 0" color="#738e9a" width="4" height="2" depth="0.1">  
+      </a-box>
+      
+
+      <!-- Tuerschild -->
+      <a-text value="4BHIF - E72" position="2.6 0.5 -6" rotation="0 90 0" color="white"></a-text>
+      <!-- Tuerschild -->
+      
+      <!-- Rechte Wand -->
+
+      <!-- Tuer-->
+      <a-box position="2.5 0 -5.5" rotation="0 90 0" src="#door"  width="1" height="2" depth="0.1">
+        <a-text value="20° Celsius" position="  -2 0 0" rotation="0 0 0" color="white" > </a-text>
+        <a-animation attribute="rotation"
+                     begin="click"
+                     dur="1000"
+                     to="0 120 0">
+          
+        </a-animation>
+        
+      </a-box>
+      <!-- Tuer -->
+      
+      <!-- linke Wand -->
+      <a-box position="-2.5 0 -5" rotation="0 90 0" color="#738e9a" width="10" height="2" depth="0.1"></a-box>
+      <!-- linke Wand -->
+      <!-- Raum E72 -->
+
+      <a-camera position="5 0 -3">
+      <a-cursor color="grey">
+        </a-cursor>
+      </a-camera>
+      
+      
+      
+      <!-- Raum E71 -->
+      <!-- Vordere Wand -->
+      <a-box position="0 0 20" color="#738e9a" width="5" height="2" depth="0.1"></a-box>
+      <!-- Vordere Wand -->
+      
+      <!-- hintere Wand -->
+      <a-box position="0 0 10" color="#738e9a" width="5" height="2" depth="0.1"></a-box>
+      <!-- hintere Wand -->
+      
+      <!-- Rechte Wand -->
+      <a-box position="2.5 0 17.5" rotation="0 90 0" color="#738e9a" width="5" height="2" depth="0.1"></a-box>
+      <a-box position="2.5 0 12" rotation="0 90 0" color="#738e9a" width="4" height="2" depth="0.1">  
+      </a-box>
+      <!-- Tuerschild -->
+      <a-text value="2AHITM - E71" position="2.6 0.5 14" rotation="0 90 0" color="white"></a-text>
+      <a-text value="20° Celsius" position="2.6 0.05 14" rotation="0 90 0" color="white"></a-text>
+      <!-- Tuerschild -->
+      <!-- Rechte Wand -->
+
+      <!-- Tuer-->
+      <a-box position="2.5 0 14.5" rotation="0 90 0" src="#door"  width="1" height="2" depth="0.1">
+        <a-text value="20° Celsius" position="  -2 0 0" rotation="0 0 0" color="white" > </a-text>
+        <a-animation attribute="rotation"
+                     begin="click"
+                     dur="1000"
+                     to="0 120 0">
+        </a-animation>
+      </a-box>
+      <!-- Tuer -->
+      
+      <!-- linke Wand -->
+      <a-box position="-2.5 0 15" rotation="0 90 0" color="#738e9a" width="10" height="2" depth="0.1"></a-box>
+      <!-- linke Wand -->
+      <!-- Raum E71 -->
+
+    </a-scene>
+  </body>
+</html>
