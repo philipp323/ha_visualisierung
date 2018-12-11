@@ -16,11 +16,17 @@
 #include <MqttClient.h>
 #include <Dht22.h>
 
-Dht22 dht22(5);
+Dht22 dht22(15);
 
 void handleGetTemperature(){
 	char response[500];
-	sprintf(response, "Temp: %.2f", dht22.getTemperature());
+	sprintf(response, "Temperatur: %.2f", dht22.getTemperature());
+	HttpServer.send(200, "text/html", response);
+}
+
+void handleGetHumidity(){
+	char response[500];
+	sprintf(response, "Humidity: %.2f", dht22.getHumidity());
 	HttpServer.send(200, "text/html", response);
 }
 
@@ -36,7 +42,7 @@ void setup() {
 	ThingTime.setNtpTimeSubscriber();   // Zeit über Internet synchronisieren	
 	MqttClient.subscribeToBroker();
 	HttpServer.on("/gettemperature", handleGetTemperature);
-	// HttpServer.on("/gethumidity", handlGetHumidity);
+	HttpServer.on("/gethumidity", handleGetHumidity);
 }
 
 void loop() {
