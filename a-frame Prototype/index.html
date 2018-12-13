@@ -51,12 +51,49 @@
       <a-box position="-2.5 0 -5" rotation="0 90 0" color="#738e9a" width="10" height="2" depth="0.1"></a-box>
       <!-- linke Wand -->
       <!-- Raum E72 -->
-
-      <a-camera position="5 0 -3">
-      <a-cursor color="grey">
-        </a-cursor>
-      </a-camera>
       
+      
+      
+      
+      
+      
+      
+      <!-- Raum EDV7 -->
+
+      <!-- Vordere Wand -->
+      <a-box position="10 0 0" color="#738e9a" width="5" height="2" depth="0.1"></a-box>
+      <!-- Vordere Wand -->
+
+      <!-- hintere Wand -->
+      <a-box position="10 0 -10" color="#738e9a" width="5" height="2" depth="0.1"></a-box>
+      <!-- hintere Wand -->
+
+      <!-- Linke Wand -->
+      <a-box position="7.5 0 -2.5" rotation="0 90 0" color="#738e9a" width="5" height="2" depth="0.1"></a-box>
+      <a-box position="7.5 0 -8" rotation="0 90 0" color="#738e9a" width="4" height="2" depth="0.1">  
+      </a-box>
+      
+      <!-- Tuerschild -->
+      <a-text value="EDV7" position="7.45 0.5 -5" rotation="0 270 0" color="white"></a-text>
+      <!-- Tuerschild -->
+      
+      <!-- Tuer-->
+      <a-box position="7.5 0 -5.5" rotation="0 90 0" src="#door"  width="1" height="2" depth="0.1">
+        <a-text value="20° Celsius" position="2 0 0" rotation="0 180 0" color="white"> </a-text>
+        <a-animation attribute="rotation"
+                     begin="click"
+                     dur="1000"
+                     to="0 120 0">
+        </a-animation>
+      </a-box> 
+      <!-- Tuer -->
+
+      
+
+      <!-- rechte Wand -->
+      <a-box position="12.5 0 -5" rotation="0 90 0" color="#738e9a" width="10" height="2" depth="0.1"></a-box>
+      <!-- rechte Wand -->
+      <!-- EDV7 -->
       
       
       <!-- Raum E71 -->
@@ -74,7 +111,6 @@
       </a-box>
       <!-- Tuerschild -->
       <a-text value="2AHITM - E71" position="2.6 0.5 14" rotation="0 90 0" color="white"></a-text>
-      <a-text value="20° Celsius" position="2.6 0.05 14" rotation="0 90 0" color="white"></a-text>
       <!-- Tuerschild -->
       <!-- Rechte Wand -->
 
@@ -94,6 +130,11 @@
       <!-- linke Wand -->
       <!-- Raum E71 -->
 
+
+      <a-camera position="5 0 -3">
+        <a-cursor color="grey">
+        </a-cursor>
+      </a-camera>
     </a-scene>
   </body>
 </html>
