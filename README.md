@@ -13,7 +13,7 @@
 ## Basic - Layout
 ![alt text](Documents/architecture.png)
 
-
+### Software
 ![alt text](Documents/software.png)
 
 ## :arrow_forward: Introduction
