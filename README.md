@@ -10,6 +10,10 @@
 - [Build with](#wrench-build-with)
 - [License](#lock-license)
 
+## Basic - Layout
+
+
+
 ## :arrow_forward: Introduction
 
  ha_visualisation (House-Automation-Visualisation) is a project to improve the overview and accessability by showing the right    information on the right position.  
