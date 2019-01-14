@@ -1,4 +1,4 @@
-# v0.1 Prototype REVIEW :pushpin:
+# README - Hausautomations Visualisierung :pushpin:
 
 ## :clipboard: Table of Contents
 - [Introduction](#arrow_forward-introduction)
