@@ -11,8 +11,10 @@
 - [License](#lock-license)
 
 ## Basic - Layout
+![alt text](Documents/architecture.png)
 
 
+![alt text](Documents/software.png)
 
 ## :arrow_forward: Introduction
 
