@@ -3,6 +3,7 @@
 ## :clipboard: Table of Contents
 - [Introduction](#arrow_forward-introduction)
 - [Architektur](#paperclip-architektur)
+- [Plakat](#mag_right-projekt-plakat)
 - [Software](#Software)
 - [Quickstart](#rocket-quickstart)
 - [Change-Log](#floppy_disk-change-log)
@@ -21,7 +22,7 @@
  This Prototype (v0.1) **isn't** a final version 
  
 ## :mag_right: Projekt-Plakat
-![alt text](Documents/ha_visualisierung_plakat)
+![Unser Plakat](Documents/ha_visualisierung_plakat.pdf)
 
 ## :paperclip: Architektur
 ![alt text](Documents/architecture.png)
@@ -118,7 +119,7 @@ Coming soon...
 ##  :page_facing_up: Documentation:
 
 Project Documents:
-- [Architektur](Documents/ha_visualisierung.html)
+- [Documents](Documents)
 
 ## :microscope: Testing:
 Browser: FireFox Quantum 60.0.2
