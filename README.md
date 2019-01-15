@@ -2,6 +2,8 @@
 
 ## :clipboard: Table of Contents
 - [Introduction](#arrow_forward-introduction)
+- [Architektur](#Architektur)
+- [Software](#Software)
 - [Quickstart](#rocket-quickstart)
 - [Change-Log](#floppy_disk-change-log)
 - [Documentation](#page_facing_up-documentation)
@@ -10,10 +12,10 @@
 - [Build with](#wrench-build-with)
 - [License](#lock-license)
 
-## Basic - Layout
+## :paperclip: Architektur
 ![alt text](Documents/architecture.png)
 
-### Software
+## Software
 ![alt text](Documents/software.png)
 
 ## :arrow_forward: Introduction
