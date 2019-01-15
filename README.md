@@ -2,7 +2,7 @@
 
 ## :clipboard: Table of Contents
 - [Introduction](#arrow_forward-introduction)
-- [Architektur](#Architektur)
+- [Architektur](#paperclip-architektur)
 - [Software](#Software)
 - [Quickstart](#rocket-quickstart)
 - [Change-Log](#floppy_disk-change-log)
@@ -12,12 +12,6 @@
 - [Build with](#wrench-build-with)
 - [License](#lock-license)
 
-## :paperclip: Architektur
-![alt text](Documents/architecture.png)
-
-## Software
-![alt text](Documents/software.png)
-
 ## :arrow_forward: Introduction
 
  ha_visualisation (House-Automation-Visualisation) is a project to improve the overview and accessability by showing the right    information on the right position.  
@@ -25,6 +19,15 @@
  Developed with three.js and a-frame.
  
  This Prototype (v0.1) **isn't** a final version 
+ 
+## :mag_right: Projekt-Plakat
+![alt text](Documents/ha_visualisierung_plakat)
+
+## :paperclip: Architektur
+![alt text](Documents/architecture.png)
+
+## Software
+![alt text](Documents/software.png)
 
 ## :rocket: Quickstart: 
 
@@ -101,6 +104,12 @@ Refering to our Code in three.js-Prototyp.
   - A-Frame is based on top of HTML, making it simple to get started. But A-Frame is not just a 3D scene graph or a markup language
   - the core is a powerful entity-component framework that provides a declarative, extensible and composable structure to three.js.
   - A-Frame supports most VR headsets and can even be used for augmented reality
+  
+### [Blender](https://www.blender.org/)  
+
+  - Zum Modellieren des Modells das wir dann über Three.js in den Browser einbinden möchten benützen wir Blender. 
+  - Allgemeine Infos zum modellieren von Gebäuden haben wir uns hier geholt: https://www.youtube.com/watch?v=AeRQvoTwmfA
+  - Wir haben viele verschiedene Tutorials abgearbeitet und unterschiedliche Loader für Blender/JS getestet. 
 
 ## :floppy_disk: Change-Log:
 
