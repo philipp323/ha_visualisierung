@@ -30,6 +30,9 @@
 ## Software
 ![alt text](Documents/software.png)
 
+## Projektstrukturplan
+![alt text](Documents/Projektstrukturplan.png)
+
 ## :rocket: Quickstart: 
 
 ### [three.js](https://threejs.org/)  
