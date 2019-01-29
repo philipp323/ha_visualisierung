@@ -23,7 +23,7 @@
  This Prototype (v0.1) **isn't** a final version 
  
 ## :mag_right: Projekt-Plakat
-![Unser Plakat](Documents/ha_visualisierung_plakat.pdf)
+![Unser Plakat](Documents/ha_visualisierung.pdf)
 
 ## :paperclip: Architektur
 ![alt text](Documents/architecture.png)
