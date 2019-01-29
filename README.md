@@ -1,3 +1,4 @@
+
 # README - Hausautomations Visualisierung :pushpin:
 
 ## :clipboard: Table of Contents
@@ -117,11 +118,33 @@ Refering to our Code in three.js-Prototyp.
 
 ### [aframe](https://aframe.io/)
   
-  - A-Frame is a web framework for building virtual reality (VR) experiences
-  - A-Frame was developed to be an easy but powerful way to develop VR content
-  - A-Frame is based on top of HTML, making it simple to get started. But A-Frame is not just a 3D scene graph or a markup language
-  - the core is a powerful entity-component framework that provides a declarative, extensible and composable structure to three.js.
-  - A-Frame supports most VR headsets and can even be used for augmented reality
+  - A-Frame ist ein web framework zur Erstellung von VR (virtual reality) Projekten
+  - A-Frame wurde entwickelt um leistungsstarke VR Inhalte einfach zu kreieren 
+  - A-Frame basiert auf HTML, dies ermöglicht einen schnellen Einstieg
+  - Den Kern bildet ein leistungsstarkes entity-component framework das als Erweiterung von three.js entwickelt wurde 
+  - A-Frame kann direkt in HTML entwickelt werden ohne etwas zu installieren
+  - A-Frame unterstützt die meisten VR Headsets und kann auch als augmented reality verwendet werden
+  
+### Was braucht man alles um A-Frame zu benutzen?
+Man braucht lediglich das js referenzieren und eine `<a-scene>` erstellen:
+
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <a-scene></a-scene>
+
+  In diese <a-scene> kann man dann die A-Frame Komponenten übertragen. Diese Komponenten sind erkennbar an dem Präfix <a-...>
+  **Beispiel:**
+   
+
+    <a-scene>
+          <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+          <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+          <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+          <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+          <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+
+  Um weitere primitives und deren Eigenschaften kennenzulernen besuche die Seite von  [aframe](https://aframe.io/).
+Viele Projekte wurden schon mit aframe entwickelt. [Beispiel](https://aframe.io/examples/showcase/snowglobe/)
   
 ### [Blender](https://www.blender.org/)  
 
