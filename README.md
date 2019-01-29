@@ -118,12 +118,12 @@ Refering to our Code in three.js-Prototyp.
 
 ### [aframe](https://aframe.io/)
   
-  - A-Frame ist ein web framework zur Erstellung von VR (virtual reality) Projekten
+  - A-Frame ist ein **web framework** zur Erstellung von VR (virtual reality) Projekten
   - A-Frame wurde entwickelt um leistungsstarke VR Inhalte einfach zu kreieren 
   - A-Frame basiert auf HTML, dies ermöglicht einen schnellen Einstieg
-  - Den Kern bildet ein leistungsstarkes entity-component framework das als Erweiterung von three.js entwickelt wurde 
-  - A-Frame kann direkt in HTML entwickelt werden ohne etwas zu installieren
-  - A-Frame unterstützt die meisten VR Headsets und kann auch als augmented reality verwendet werden
+  - Den Kern bildet ein leistungsstarkes entity-component framework das als **Erweiterung von three.js** entwickelt wurde 
+  - A-Frame kann direkt in HTML entwickelt werden **ohne** etwas **zu installieren**
+  - A-Frame unterstützt die meisten VR Headsets und kann **auch als augmented reality** verwendet werden
   
 ### Was braucht man alles um A-Frame zu benutzen?
 Man braucht lediglich das js referenzieren und eine `<a-scene>` erstellen:
@@ -210,3 +210,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
