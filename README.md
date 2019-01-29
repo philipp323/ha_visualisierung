@@ -1,8 +1,8 @@
 
 # README - Hausautomations Visualisierung :pushpin:
 
-## :clipboard: Table of Contents
- - [Introduction](#arrow_forward-introduction)
+## :clipboard: Inhaltsverzeichnis
+ - [Einleitung](#arrow_forward-Einleitung)
  - [Architektur](#paperclip-architektur)
  - [Plakat](#mag_right-projekt-plakat)
  - [Software](#Software)
@@ -10,19 +10,17 @@
 	 - [three.js](#threejs)
 	 - [aframe](#aframe)
  - [Change-Log](#floppy_disk-change-log)
- - [Documentation](#page_facing_up-documentation)
+ - [Dokumentation](#page_facing_up-dokumentation)
  - [Testing](#microscope-testing)
- - [Contributing](#chart_with_upwards_trend-contributing)
- - [Build with](#wrench-build-with)
+ - [Mitwirkende](#chart_with_upwards_trend-Mitwirkende)
+ - [Werkzeug](#wrench-Werkzeug)
  - [License](#lock-license)
 
-## :arrow_forward: Introduction
-
- ha_visualisation (House-Automation-Visualisation) is a project to improve the overview and accessability by showing the right    information on the right position.  
+## :arrow_forward: Einleitung  
+Unser Projekt stellt Informationen wie Temperatur, Luftfeuchtigkeit etc. von einem Raum in einem übersichtlichen 3D-Modell dar.
+ Entwickelt mit three.js und a-frame.
  
- Developed with three.js and a-frame.
- 
- This Prototype (v0.1) **isn't** a final version 
+ Dieser Prototyp (v0.1) **ist nicht**  die finale Version 
  
 ## :mag_right: Projekt-Plakat
 ![Unser Plakat](Documents/ha_visualisierung.pdf)
@@ -39,12 +37,12 @@
 ## :rocket: Quickstart: 
 
 ### [three.js](https://threejs.org/)  
-  is a Javascript 3D library.
-  [Download](https://github.com/mrdoob/three.js/) the needed .js files here.
+  ist eine Javascript 3D library.
+  [Downloade](https://github.com/mrdoob/three.js/) die benötigten .js files hier.
   
-  ### Basic Code Explanation:
+  ### Ein einfaches Beispiel:
   
-  * What do we need?
+  * Was brauchen wir?
   
         <!DOCTYPE html>
            <html>
@@ -64,7 +62,7 @@
 	             </body>
           </html>
           
-  * Important Things
+  * Wichtige Dinge
   
         var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 300);
@@ -74,7 +72,7 @@
         var amlight = new THREE.AmbientLight(0xffffff, 1);
         (A light)
 	
-  * Load - Objects
+  * Objekte laden
   	
         var loader = new THREE.GLTFLoader();
         loader.load('SchoolEntranceFenster.glb', function (gltf) {
@@ -88,15 +86,15 @@
       		console.error(error);
     	});
         
-  * Structures
+  * Strukturen
     
         var geometry = new THREE.BoxGeometry( 1, 1, 1 );
         var material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
         var cube = new THREE.Mesh( geometry, material );
         scene.add( cube );
-A cube, spheres, circles, rectangles, donuts and much more. 
+Ein Würfel, Kugel, Kreise, Dreiecke, Donuts und vieles mehr. 
         
-  * Clicking objects?
+  * Klickbare Objekte?
   
         var raycaster = new THREE.Raycaster();
         var YOUR_CLICKABLE_OBJECTS = [];
@@ -115,8 +113,7 @@ A cube, spheres, circles, rectangles, donuts and much more.
               }
         }
         
-More information in our code, and the three.js Documentation.
-Refering to our Code in three.js-Prototyp.
+Mehr Informationen sind in unserem Code und in der three.js Dokumentation.
 
 ### [aframe](https://aframe.io/)
   
@@ -158,28 +155,27 @@ Viele Projekte wurden schon mit aframe entwickelt. [Beispiel](https://aframe.io/
 
 Coming soon...
 
-##  :page_facing_up: Documentation:
+##  :page_facing_up: Dokumentation:
 
-Project Documents:
+Projekt Dokumente:
 - [Documents](Documents)
 
 ## :microscope: Testing:
 Browser: FireFox Quantum 60.0.2
 
 Known Issues:
-  - Placement of objects (three.js, a lot of work)
+  - Objekte platzieren (three.js, sehr viel Arbeit)
 
-## :chart_with_upwards_trend: Contributing:
+## :chart_with_upwards_trend: Mitwirkende:
 
-### Developers:
+### Entwickler:
 - Philipp Auinger
 - Nenad Tripic
 
-School: HTL Leonding
+Schule: HTL Leonding
 
-#### To see the contributions to master, of each developer, check out [this graph.](https://github.com/philippAuinger/ha_visualisierung/graphs/contributors)
 
-## :wrench: Build with:
+## :wrench: Werkzeug:
 
 - [three.js](https://threejs.org/)  
 - [aframe](https://aframe.io/)
