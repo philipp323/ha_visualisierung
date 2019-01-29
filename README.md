@@ -70,6 +70,20 @@
         
         var amlight = new THREE.AmbientLight(0xffffff, 1);
         (A light)
+	
+  * Load - Objects
+  	
+        var loader = new THREE.GLTFLoader();
+        loader.load('SchoolEntranceFenster.glb', function (gltf) {
+        model = gltf.scene;
+        model.position.x = 0;
+        model.position.y = 0;
+        model.position.z = 0;
+        scene.add(gltf.scene);
+
+    	}, undefined, function (error) {
+      		console.error(error);
+    	});
         
   * Structures
     
