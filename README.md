@@ -3,9 +3,10 @@
 
 ## :clipboard: Inhaltsverzeichnis
  - [Einleitung](#arrow_forward-Einleitung)
- - [Architektur](#paperclip-architektur)
  - [Plakat](#mag_right-projekt-plakat)
+ - [Architektur](#paperclip-architektur)
  - [Software](#Software)
+ - [Projektstrukturplan](#Projektstrukturplan)
  - [Quickstart](#rocket-quickstart) 
 	 - [three.js](#threejs)
 	 - [aframe](#aframe)
