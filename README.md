@@ -40,7 +40,7 @@
   is a Javascript 3D library.
   [Download](https://github.com/mrdoob/three.js/) the needed .js files here.
   
-  #### Basic Code Explanation:
+  ### Basic Code Explanation:
   
   * What do we need?
   
