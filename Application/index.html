@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+
+    <title>HA_Visualisierung</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <script src="js/three.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/dat.gui.min.js"></script>
+    <script src="js/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <a type="button" id="sidebarCollapse"><i class="fas fa-arrows-alt-h fa-2x cursor"></i></a>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="" aria-expanded="false">
+                        <i class="fas fa-redo fa-2x"></i>
+                        Reload
+                    </a>
+                </li>
+                <li>
+                    <a aria-expanded="false">
+                        <input type="file" id="files" name="file" class="inputfile"/>
+                        <label for="files"><i class="fas fa-upload fa-2x"></i> Upload</label>
+                    </a>
+                </li>
+                <li>
+                    <a onclick='loadData("Room.glb")' aria-expanded="false" class="cursor" >
+                        <i class="fas fa-box-open fa-2x"></i>
+                        Raum
+                    </a>
+                </li>
+                <li>
+                    <a data-target="#infopointModal" data-toggle="modal" aria-expanded="false" class="cursor" >
+                        <i class="fas fa-info-circle fa-2x"></i>
+                        Infopoint
+                    </a>
+                </li>
+            </ul>
+            <div id="progress_bar"><div class="percent">0%</div></div>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://github.com/philippAuinger/ha_visualisierung" class="download">GitHub - Repository</a>
+                </li>
+                <li>
+                        <a href="http://vm81.htl-leonding.ac.at:8080/projects" class="download">YouTrack - Projects</a>
+                </li>
+            </ul>
+        </nav>
+
+    <!-- Page Content  -->
+    <div id="content">  
+        <div class="annotation" style="display:none">
+        </div>
+    </div>
+
+    <div class="modal fade" id="infopointModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="label">Neuen Infopoint erstellen</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="name" class="col-form-label">Name:</label>
+                      <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="temperature" class="col-form-label">Temperatur:</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn violet text-white">Send message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <script>
+
+        // load a resource
+        var scene = new THREE.Scene();
+        scene.background = new THREE.Color("rgb(36, 202, 255 )");
+        var renderer = new THREE.WebGLRenderer({
+            antialias: true
+        });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById("content").appendChild(renderer.domElement);
+
+        var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 300);
+        camera.position.set(3, 3, -3);
+
+        var controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        var texture = new THREE.TextureLoader().load("textures/images.jpg");
+
+        var amlight = new THREE.AmbientLight(0xffffff, 1);
+        scene.add(amlight);
+
+        var dirlight = new THREE.DirectionalLight(0xffffff, 1);
+        scene.add(dirlight);
+
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set(3, 2);
+
+        var material = new THREE.MeshPhongMaterial({
+            color: 0xffffff,
+            map: texture,
+            bumpMap: texture,
+            bumpScale: 0.8,
+            // wireframe: true
+        });
+
+        var loader = new THREE.GLTFLoader();
+
+        function loadData(name){
+            loader.load(name, function (gltf) {
+                model = gltf.scene;
+                model.position.x = 0;
+                model.position.y = 0;
+                model.position.z = 0;
+                scene.add(gltf.scene);
+
+            }, undefined, function (error) {
+                console.error(error);
+            });
+        }
+
+
+
+        function render() {
+            controls.update();
+            renderer.render(scene, camera);
+            requestAnimationFrame(render);
+        }
+
+        render();
+    </script>
+
+
+
+    <script>
+        var reader;
+        var progress = document.querySelector('.percent');
+      
+        function abortRead() {
+          reader.abort();
+        }
+      
+        function errorHandler(evt) {
+          switch(evt.target.error.code) {
+            case evt.target.error.NOT_FOUND_ERR:
+              alert('File Not Found!');
+              break;
+            case evt.target.error.NOT_READABLE_ERR:
+              alert('File is not readable');
+              break;
+            case evt.target.error.ABORT_ERR:
+              break; // noop
+            default:
+              alert('An error occurred reading this file.');
+          };
+        }
+      
+        function updateProgress(evt) {
+          // evt is an ProgressEvent.
+          if (evt.lengthComputable) {
+            var percentLoaded = Math.round((evt.loaded / evt.total) * 100);
+            // Increase the progress bar length.
+            if (percentLoaded < 100) {
+              progress.style.width = percentLoaded + '%';
+              progress.textContent = percentLoaded + '%';
+            }
+          }
+        }
+      
+        function handleFileSelect(evt) {
+          // Reset progress indicator on new file selection.
+          progress.style.width = '0%';
+          progress.textContent = '0%';
+      
+          reader = new FileReader();
+          reader.onerror = errorHandler;
+          reader.onprogress = updateProgress;
+          reader.onabort = function(e) {
+            alert('File read cancelled');
+          };
+          reader.onloadstart = function(e) {
+            document.getElementById('progress_bar').className = 'loading';
+          };
+          reader.onload = function(e) {
+            // Ensure that the progress bar displays 100% at the end.
+            progress.style.width = '100%';
+            progress.textContent = '100%';
+            setTimeout("document.getElementById('progress_bar').className='';", 2000);
+          }
+          //save file
+          var file = document.getElementById('files').files[0];
+          loadData(file.name);
+        }
+      
+        document.getElementById('files').addEventListener('change', handleFileSelect, false);
+      </script>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
