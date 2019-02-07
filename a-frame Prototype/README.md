@@ -1,6 +1,2 @@
-# A-Frame Prototype
-#
-#
-#### Thimble
-
-For the newest version see [INDEX](https://github.com/philippAuinger/ha_visualisierung/blob/master/a-frame%20Prototype/index.html)
+# A-Frame Prototyp
+Das ist ein stark vereinfachtes Modell das die aktuellen Daten eines Raumes direkt vom ESP32 lädt und sie in From eines PopUp's darstellt.
