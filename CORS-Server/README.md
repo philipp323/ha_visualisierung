@@ -16,7 +16,7 @@ Mit gewissen [HTTP Headern](https://developer.mozilla.org/de/docs/Glossary/Heade
 Die Same Origin Policy ist eine Funktion, die in den meisten modernen Browsern implementiert ist, um das Laden von Ressourcen (z. B. Bilder, Schriftarten, Skripte, …) durch Skriptsprachen (z. B. JavaScript, ActionScript) auf Clientseite nur von der eigenen Quelle (Origin) zu erlauben. Somit wird effektiv verhindert, dass Objekte durch clientseitige Skripte von fremden Webseiten geladen werden. Die Quelle (Origin) einer Webseite wird durch das Protokoll (z. B. HTTPS), die Domäne (z. B. www.google.at) und den Port (z. B. 443) definiert.
 
 
-**Wie startet man diesen Server in VS Code?**
-1.) Terminal öffnen
-2.) Eingabe: npm start 
+**Wie startet man diesen Server in VS Code?**   
+1.) Terminal öffnen   
+2.) Eingabe: `npm start` 
 
