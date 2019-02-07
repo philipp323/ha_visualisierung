@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="styles.css" rel="stylesheet"type="text/css"media="all">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
+</head>
+<body>
+    
+    <a class="trigger_popup_fricc" onclick="loadWebsite()">Click here to get the temperatur</a>
+    <!-- PopUp von https://html-online.com/articles/simple-popup-box/ -->
+    <div class="hover_bkgr_fricc">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton">X</div>
+            <p style="font-weight: bold; font-style: italic" >RAUM E72</p>
+            <p id="content" style="align-content: center"></p>
+        </div>
+    </div>
+
+    <script>
+        async function loadWebsite(){
+            var contentURI= "http://localhost:8080/http://192.168.0.112/get";
+            //zu erst wird dem CORS-SERVER die URL vom ESP32 angegeben und dieser schickt dann die Resultate zurueck    
+            let response = await fetch(contentURI);
+            let text = await response.text();
+            document.querySelector("#content").innerText = text;
+            //CORS-SERVER von: https://github.com/Rob--W/cors-anywhere
+        }
+
+        $(window).load(function () {
+    $(".trigger_popup_fricc").click(function(){
+       $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+});
+
+    </script>
+</body>
+</html>
