@@ -171,8 +171,8 @@ Known Issues:
 
 ### Entwickler:
 - Philipp Auinger
-- Nenad Tripic
-
+- Nenad Tripic      
+Um unseren Burndownchart, aktuelle Aufgaben etc. zu sehen besuchen Sie unser [YouTrack](http://vm81.htl-leonding.ac.at:8080/agiles/99-43/100-351).        
 Schule: HTL Leonding
 
 
