@@ -1,7 +1,7 @@
-**Wie lädt man Daten vom ESP32?**
-Ganz wichtig ist das man dabei einen **CORS-SERVER** benutzt! Im Repository ist ein passender schon oben.
+**Wie lädt man Daten vom ESP32?**    
+Ganz wichtig ist das man dabei einen **CORS-SERVER** benutzt! Im Repository ist ein passender schon oben samt Tutorial wie man ihn startet und was er tut.
 
-Im Prinzip muss nur über ein simples fetch die daten von der Website geladen werden die der ESP32 zur Verfügung stellt.
+Im Prinzip muss nur über ein simples `fetch` die daten von der Website geladen werden die der ESP32 zur Verfügung stellt.
 
     var contentURI= "http://localhost:8080/http://192.168.0.112/get";
     
