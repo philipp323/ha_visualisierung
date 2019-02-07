@@ -184,6 +184,7 @@ Schule: HTL Leonding
 - HTML5
 - CSS
 - JavaScript
+- Node.js
 
 
 ## :lock: License:
