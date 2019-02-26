@@ -7,6 +7,7 @@
  - [Architektur](#paperclip-architektur)
  - [Software](#Software)
  - [Projektstrukturplan](#Projektstrukturplan)
+ - [Use-case-Diagramm](#Use-case-Diagramm)
  - [Quickstart](#rocket-quickstart) 
 	 - [three.js](#threejs)
 	 - [aframe](#aframe)
@@ -34,6 +35,12 @@ Unser Projekt stellt Informationen wie Temperatur, Luftfeuchtigkeit etc. von ein
 
 ## Projektstrukturplan
 ![alt text](Documents/Projektstrukturplan.png)
+
+
+## Use-case-Diagramm
+Als User will ich mir ein 3D-Modell der Schule ansehen können und die Temperatur samt Luftfeuchtigkeit von einem bestimmten Raum herausfinden.
+
+![alt text](Documents/use_case_diagram.png)
 
 ## :rocket: Quickstart: 
 
@@ -210,4 +217,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
 
