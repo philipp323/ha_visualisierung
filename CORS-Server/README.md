@@ -19,5 +19,5 @@ Die Same Origin Policy ist eine Funktion, die in den meisten modernen Browsern i
 **Wie startet man diesen Server in VS Code?**   
 1.) Terminal öffnen   
 2.a) Bei der ersten Ausführung ganz wichtig alle nötigen Modules zu installieren `npm install`      
-2.) Eingabe: `npm index.js` 
+2.) Eingabe: `npm start index.js` 
 
