@@ -24,7 +24,7 @@ Unser Projekt stellt Informationen wie Temperatur, Luftfeuchtigkeit etc. von ein
  Entwickelt mit three.js und a-frame.
  
 ## :clipboard: Protokoll
-[Protokoll File](Protokoll.md)
+[Protokoll File](Documents/Protokoll.md)
  
 ## :mag_right: Projekt-Plakat
 ![Unser Plakat](Documents/ha_visualisierung.pdf)
