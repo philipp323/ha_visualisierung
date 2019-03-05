@@ -8,7 +8,7 @@ HTL Leonding
 Teilnehmer:   
   HTL Leonding   
   Professor Stütz   
-  Schriftführer: Philipp Auinger   
+  Schriftführer: Philipp Auinger    
   
  Verteiler:
   
