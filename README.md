@@ -3,6 +3,7 @@
 
 ## :clipboard: Inhaltsverzeichnis
  - [Einleitung](#arrow_forward-Einleitung)
+ - [Protokoll](#clipboard-Protokoll)
  - [Plakat](#mag_right-projekt-plakat)
  - [Architektur](#paperclip-architektur)
  - [Software](#Software)
@@ -23,6 +24,9 @@ Unser Projekt stellt Informationen wie Temperatur, Luftfeuchtigkeit etc. von ein
  Entwickelt mit three.js und a-frame.
  
  Dieser Prototyp (v0.1) **ist nicht**  die finale Version 
+ 
+## :clipboard: Protokoll
+[Protokoll File](Protokoll.md)
  
 ## :mag_right: Projekt-Plakat
 ![Unser Plakat](Documents/ha_visualisierung.pdf)
