@@ -35,9 +35,6 @@ Unser Projekt stellt Informationen wie Temperatur, Luftfeuchtigkeit etc. von ein
 ## Software
 ![alt text](Documents/software.png)
 
-## Projektstrukturplan
-![alt text](Documents/Projektstrukturplan.png)
-
 
 ## Use-case-Diagramm
 Als User will ich mir ein 3D-Modell der Schule ansehen können und die Temperatur samt Luftfeuchtigkeit von einem bestimmten Raum herausfinden.
