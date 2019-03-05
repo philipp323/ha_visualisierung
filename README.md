@@ -23,8 +23,6 @@
 Unser Projekt stellt Informationen wie Temperatur, Luftfeuchtigkeit etc. von einem Raum in einem übersichtlichen 3D-Modell dar.
  Entwickelt mit three.js und a-frame.
  
- Dieser Prototyp (v0.1) **ist nicht**  die finale Version 
- 
 ## :clipboard: Protokoll
 [Protokoll File](Protokoll.md)
  
