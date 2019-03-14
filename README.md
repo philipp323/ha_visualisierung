@@ -46,7 +46,7 @@ Als User will ich mir ein 3D-Modell der Schule ansehen können und die Temperatu
 
 ### [three.js](https://threejs.org/)  
   ist eine Javascript 3D library.
-  [Downloade](https://github.com/mrdoob/three.js/) die benötigten .js files hier.
+  [Download](https://github.com/mrdoob/three.js/) die benötigten .js files hier.
   
   ### Ein einfaches Beispiel:
   
@@ -156,7 +156,7 @@ Viele Projekte wurden schon mit aframe entwickelt. [Beispiel](https://aframe.io/
 ### [Blender](https://www.blender.org/)  
 
   - Zum Modellieren des Modells das wir dann über Three.js in den Browser einbinden möchten benützen wir Blender. 
-  - Allgemeine Infos zum modellieren von Gebäuden haben wir uns hier geholt: https://www.youtube.com/watch?v=AeRQvoTwmfA
+  - Allgemeine Infos zum modellieren von Gebäuden haben wir uns hier geholt: [Hier](https://www.youtube.com/watch?v=AeRQvoTwmfA)
   - Wir haben viele verschiedene Tutorials abgearbeitet und unterschiedliche Loader für Blender/JS getestet. 
 
 ## :floppy_disk: Change-Log:
