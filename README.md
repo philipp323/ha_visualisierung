@@ -12,6 +12,7 @@
  - [Quickstart](#rocket-quickstart) 
 	 - [three.js](#threejs)
 	 - [aframe](#aframe)
+	 - [Blender](#blender)
  - [Change-Log](#floppy_disk-change-log)
  - [Dokumentation](#page_facing_up-dokumentation)
  - [Testing](#microscope-testing)
