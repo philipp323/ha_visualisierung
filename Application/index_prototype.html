@@ -33,7 +33,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
     <script src="js/MTLLoader.js"></script>
     <script src="js/LoaderSupport.js"></script>
-    <script src="js/OBJLoader.js"></script>
+    <script src="js/ObjectLoader2.js"></script>
 
     <div class="wrapper">
         <!-- Sidebar  -->
@@ -174,63 +174,35 @@
         });
         document.getElementById("content").appendChild(renderer.domElement);
         renderer.setSize(window.innerWidth , window.innerHeight)
-        renderer.shadowMapEnabled = true;
-		renderer.shadowMapType = THREE.PCFSoftShadowMap;
 
         var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 25000);
-        camera.position.set(8000, 3000, 5000);  
-        //camera.position.set(5, 2, 5);
+        //camera.position.set(8000, 3000, 5000);  
+        camera.position.set(5, 2, 5);
 
         var controls = new THREE.OrbitControls(camera, renderer.domElement);
 
         var texture = new THREE.TextureLoader().load("textures/images.jpg");
 
-        // var amlight = new THREE.AmbientLight(0xffffff, 1);
-        // amlight.castShadow = true;
-        // scene.add(amlight);
+        var amlight = new THREE.AmbientLight(0xffffff, 1);
+        amlight.castShadow = true;
+        scene.add(amlight);
 
-        // //var dirlight = new THREE.DirectionalLight(0xffffff, 1);
-        // //scene.add(dirlight);
+        //var dirlight = new THREE.DirectionalLight(0xffffff, 1);
+        //scene.add(dirlight);
 
-        // var spotLight = new THREE.SpotLight(0xffffff);
-		// spotLight.position.set(4000, 7000, 600);
-		// spotLight.castShadow = true;
-		// scene.add(spotLight);
-		// spotLight.shadow.mapSize.width = 1024;
-		// spotLight.shadow.mapSize.height = 1024;
-		// spotLight.shadow.camera.near = 500;
-		// spotLight.shadow.camera.far = 4000;
-		// spotLight.shadow.camera.fov = 30;
+        var spotLight = new THREE.SpotLight(0xffffff);
+		spotLight.position.set(4000, 7000, 600);
+		spotLight.castShadow = true;
+		scene.add(spotLight);
+		spotLight.shadow.mapSize.width = 1024;
+		spotLight.shadow.mapSize.height = 1024;
+		spotLight.shadow.camera.near = 500;
+		spotLight.shadow.camera.far = 4000;
+		spotLight.shadow.camera.fov = 30;
 
-        // texture.wrapS = THREE.RepeatWrapping;
-        // texture.wrapT = THREE.RepeatWrapping;
-        // texture.repeat.set(3, 2);
-
-        var hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.4);
-        hemiLight.position.set(0, 500, 0);
-        scene.add(hemiLight);
-
-        var dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
-        dirLight.position.set(-1, 0.75, 1);
-        dirLight.position.multiplyScalar(50);
-        dirLight.name = "dirlight";
-        // dirLight.shadowCameraVisible = true;
-
-        scene.add(dirLight);
-
-        dirLight.castShadow = true;
-        dirLight.shadowMapWidth = dirLight.shadowMapHeight = 1024 * 2;
-
-        var d = 300;
-
-        dirLight.shadowCameraLeft = -d;
-        dirLight.shadowCameraRight = d;
-        dirLight.shadowCameraTop = d;
-        dirLight.shadowCameraBottom = -d;
-
-        dirLight.shadowCameraFar = 3500;
-        dirLight.shadowBias = -0.0001;
-        dirLight.shadowDarkness = 0.35;
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set(3, 2);
 
         var modelMaterial = new THREE.MeshBasicMaterial({
             color: 0xffffff,
@@ -266,53 +238,10 @@
         }
 
 
-            
-            var floors = ['cellar', 'ground_floor', 'first_floor', 'second_floor', 'ceiling'];
-
-            loadModel("model");
-
-            function loadModel(modelName) {
-                var mtlLoader = new THREE.MTLLoader();
-                mtlLoader.setPath('models/');
-                var url = modelName + ".mtl";
-                mtlLoader.load(url, function (materials) {
-
-                    materials.preload();
-
-                    var objLoader = new THREE.OBJLoader();
-                    objLoader.setMaterials(materials);
-                    objLoader.setPath('models/');
-
-                    // var callbackOnLoad = function (event) {
-                    //     console.log(event);
-                    //     scene.add(event.detail.loaderRootNode);
-
-                    // };
-                    objLoader.load(modelName + ".obj", function (object) {
-                        scene.add(object);
-                        console.log(object);
-                        //for (var i = 0; i < object.children.length; i++) {
-                            YOUR_CLICKABLE_OBJECTS.push(object.children[0]);
-                            // if (floors.includes(object.children[i].name)) {
-                            //     object.children[i].castShadow = true;
-                            // } else {
-                            //     object.children[i].receiveShadow = true;
-                            // }
-                        //}
-
-                        scene.traverse(function (children) {
-                            //objects.push(children);
-                        });
-                        console.log(YOUR_CLICKABLE_OBJECTS);
-                    });
-                });
-            } 
-
-
         var infopointGeometry = new THREE.SphereGeometry( 0.1, 32, 32 );
         var infopoint;
         var info;
-            
+
         function newInfopoint(name, url, temperature){
             infopoint = new THREE.Mesh(infopointGeometry, infopointMaterial);
             YOUR_CLICKABLE_INFOPOINTS.push(infopoint);
