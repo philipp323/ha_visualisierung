@@ -1,0 +1,119 @@
+# FILE:first_floor.obj
+newmtl GDLM1_SHADOW_MATERIAL
+Ka 0.228885 0.228885 0.228885
+Kd 0.228885 0.228885 0.228885
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl FARBE__WEI__
+Ka 0.8 0.8 0.8
+Kd 0.89 0.89 0.89
+Ks 0.0891005 0.0891005 0.09
+illum 2
+Ns 2.2
+newmtl VERPUTZ__GLATT__WEI__
+Ka 0.533647 0.538039 0.524863
+Kd 0.619412 0.62451 0.609216
+Ks 0.333686 0.333686 0.333686
+illum 2
+Ns 0
+map_Ka first_floor_Textures\Putz 02 GS.jpg
+map_Kd first_floor_Textures\Putz 02 GS.jpg
+map_Ks first_floor_Textures\Putz 02 GS.jpg
+newmtl PEN_MATERIAL6
+Ka 0.15259 0.15259 0.15259
+Kd 0.15259 0.15259 0.15259
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl GDLM5_PEN_MATERIAL0
+Ka 0.844892 0.844892 0.844892
+Kd 0.844892 0.844892 0.844892
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl METALL_ALUMINIUM__MATT
+Ka 0.899414 0.86345 0.86345
+Kd 0.275331 0.264321 0.264321
+Ks 0.544738 0.544738 0.544738
+illum 2
+Ns 7.8
+newmtl FENSTERRAHMEN
+Ka 0.856863 0.856863 0.856863
+Kd 0.856863 0.856863 0.856863
+Ks 0.25 0.25 0.25
+illum 2
+Ns 5
+newmtl HOLZ_ESCHE
+Ka 0.455608 0.313412 0.272784
+Kd 0.461765 0.317647 0.276471
+Ks 0.47 0.47 0.47
+illum 2
+Ns 14
+map_Ka first_floor_Textures\Esche GS.jpg
+map_Kd first_floor_Textures\Esche GS.jpg
+map_Ks first_floor_Textures\Esche GS.jpg
+newmtl GLAS_NORMALGLAS
+Ka 0.186275 0.186275 0.19
+Kd 0.186275 0.186275 0.19
+Ks 0.5 0.5 0.5
+illum 2
+d 0.49
+Ns 17.24
+newmtl METALL_STAHL__GEB__RSTET
+Ka 0.337059 0.337059 0.337059
+Kd 0.419451 0.419451 0.419451
+Ks 0.413373 0.413373 0.413373
+illum 2
+Ns 0
+map_Ka first_floor_Textures\Stahl_gebürstet GS.jpg
+map_Kd first_floor_Textures\Stahl_gebürstet GS.jpg
+map_Ks first_floor_Textures\Stahl_gebürstet GS.jpg
+newmtl METALL_STAHL__MATT
+Ka 0.337059 0.337059 0.337059
+Kd 0.419451 0.419451 0.419451
+Ks 0.413373 0.413373 0.413373
+illum 2
+Ns 0
+map_Ka first_floor_Textures\Stahl_matt GS.jpg
+map_Kd first_floor_Textures\Stahl_matt GS.jpg
+map_Ks first_floor_Textures\Stahl_matt GS.jpg
+newmtl HOLZ_KIEFER
+Ka 0.501882 0.459529 0.389647
+Kd 0.697059 0.638235 0.541176
+Ks 0.343647 0.343647 0.343647
+illum 2
+Ns 0
+map_Ka first_floor_Textures\Kiefer Maserung 01-opt GS.jpg
+map_Kd first_floor_Textures\Kiefer Maserung 01-opt GS.jpg
+map_Ks first_floor_Textures\Kiefer Maserung 01-opt GS.jpg
+newmtl METALL_CHROM
+Ka 0.36702 0.36702 0.36702
+Kd 0.494353 0.494353 0.494353
+Ks 0.96 0.96 0.96
+illum 2
+Ns 53.92
+newmtl METALL_STAHL__VERZINKT
+Ka 0.458039 0.476863 0.492549
+Kd 0.458039 0.476863 0.492549
+Ks 0.466667 0.466667 0.466667
+illum 2
+Ns 7
+map_Ka first_floor_Textures\Stahl_verzinkt GS.jpg
+map_Kd first_floor_Textures\Stahl_verzinkt GS.jpg
+map_Ks first_floor_Textures\Stahl_verzinkt GS.jpg
+newmtl STADTPLANUNG_FLURST__CKE
+Ka 0.475294 0.557647 0.432941
+Kd 0.530745 0.622706 0.483451
+Ks 0.25 0.25 0.25
+illum 2
+Ns 30
+newmtl NATUR_ERDE
+Ka 0.371451 0.26102 0.188235
+Kd 0.580392 0.407843 0.294118
+Ks 0 0 0
+illum 2
+Ns 0
+map_Ka first_floor_Textures\Erde GS.jpg
+map_Kd first_floor_Textures\Erde GS.jpg
+map_Ks first_floor_Textures\Erde GS.jpg
