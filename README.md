@@ -7,6 +7,7 @@
  - [Demo](#computer-Demo)
  - [Plakat](#mag_right-projekt-plakat)
  - [Architektur](#paperclip-architektur)
+ - [Systemdiagramm](#Systemdiagramm)
  - [Software](#Software)
  - [Projektstrukturplan](#Projektstrukturplan)
  - [Use-case-Diagramm](#Use-case-Diagramm)
@@ -35,7 +36,10 @@ Unser Projekt stellt Informationen wie Temperatur, Luftfeuchtigkeit etc. von ein
 ![Unser Plakat](Documents/ha_visualisierung.pdf)
 
 ## :paperclip: Architektur
-![alt text](Documents/architecture.png)
+![alt text](Documents/architecture.png)   
+
+## Systemdiagramm
+![alt text](Documents/Systemdiagramm.jpg)
 
 ## Software
 ![alt text](Documents/software.png)
