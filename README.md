@@ -23,8 +23,7 @@
  - [License](#lock-license)
 
 ## :arrow_forward: Einleitung  
-Unser Projekt stellt Informationen wie Temperatur, Luftfeuchtigkeit etc. von einem Raum in einem übersichtlichen 3D-Modell dar.
- Entwickelt mit three.js und a-frame.
+Unser Projekt stellt die HTL-Leonding in einem übersichtlichen Modell dar. In diesem Modell wird dann die aktuelle Temperatur, Luftfeuchtigkeit, C02-Gehalt und die Lautstärke eines belibiegen Raumes angezeigt.
  
 ## :computer: Demo
 
