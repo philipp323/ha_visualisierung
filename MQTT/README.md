@@ -22,12 +22,12 @@ für mehr Informationen klicken Sie [hier](https://blog.doubleslash.de/mqtt-fuer
 
 ## MQTT.fx - Tutorial
 
-**Connection Profile Einstellungen**: 
-![Broker Profile Setting](Connection-Profil-01.jpg)
+**Connection Profile Einstellungen**:      
+    ![Broker Profile Setting](Connection-Profil-01.JPG)
 
 > Broker Profil Einstellungen
 
-![Zugangsdaten eingeben](Connection-Profil-02.jpg)
+   ![Zugangsdaten eingeben](Connection-Profil-02.JPG)
 
 > Zugangsdaten eingeben
 
