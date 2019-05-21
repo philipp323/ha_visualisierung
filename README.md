@@ -23,7 +23,7 @@
  - [License](#lock-license)
 
 ## :arrow_forward: Einleitung  
-Unser Projekt stellt die HTL-Leonding in einem übersichtlichen Modell dar. In diesem Modell wird dann die aktuelle Temperatur, Luftfeuchtigkeit, C02-Gehalt und die Lautstärke eines belibiegen Raumes angezeigt.
+Unser Projekt stellt die HTL-Leonding in einem übersichtlichen Modell dar. In diesem Modell wird dann die aktuelle Temperatur, Luftfeuchtigkeit, C02-Gehalt und die Lautstärke eines beliebigen Raumes angezeigt.
  
 ## :computer: Demo
 
