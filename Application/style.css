@@ -3,14 +3,17 @@ body {
   overflow: hidden;
 }
 
-canvas {
-  width: 100%;
-  height: 100%;
+.ui {
+    position: absolute;
+}
+
+.right {
+    right:0;
 }
 
 canvas {
-    width: 100%;
-    height: 100px;
+    width: auto;
+    height: auto;
     display: block;
 }
 
@@ -31,6 +34,52 @@ canvas {
     line-height: 1.2;
     transition: opacity .5s;
     }
+
+.floorSelection{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.smallButton {
+    margin-right: 10px;
+    margin-top: 10px;
+    transition: 500ms;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    outline:none;
+}
+
+.smallButton:active {
+    margin-right: 10px;
+    margin-top: 10px;
+    transition: 500ms;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    padding: 5px 17px;
+    text-align: center;
+    text-decoration: bold;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    outline:none;
+    
+}
+
+button[type="button"] {
+    outline: none;
+}
+
+button[type="button"]::-moz-focus-inner {
+    border: 0;
+}
 
 #number {
     position: absolute;
@@ -239,7 +288,8 @@ a.article:hover {
 ----------------------------------------------------- */
 
 #content {
-    width: 100%;
+    width: auto;
+    height: auto;
     padding: 0px;
     min-height: 100vh;
     transition: all 0.3s;
@@ -344,5 +394,5 @@ a.article:hover {
 }
 
 .violet{
-    background-color: #7386D5 !important;
+    background-color: #7386D5;
 }
