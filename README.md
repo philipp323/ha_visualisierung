@@ -1,4 +1,5 @@
 
+
 # README - Hausautomations Visualisierung :pushpin:
 
 ## :clipboard: Inhaltsverzeichnis
@@ -9,6 +10,7 @@
  - [Architektur](#paperclip-architektur)
  - [Systemdiagramm](#Systemdiagramm)
  - [Software](#Software)
+ - [Docker](#whale-docker)
  - [Projektstrukturplan](#Projektstrukturplan)
  - [Use-case-Diagramm](#Use-case-Diagramm)
  - [Quickstart](#rocket-quickstart) 
@@ -43,6 +45,8 @@ Unser Projekt stellt die HTL-Leonding in einem übersichtlichen Modell dar. In d
 ## Software
 ![alt text](Documents/software.png)
 
+##	:whale: Docker
+Natürlich kann unser Projekt gedockert werden, sehen Sie dazu den Ordner [Docker](https://github.com/philippAuinger/ha_visualisierung/tree/master/Docker) dort steht alles beschrieben.
 
 ## Use-case-Diagramm
 Als User will ich mir ein 3D-Modell der Schule ansehen können und die Temperatur samt Luftfeuchtigkeit von einem bestimmten Raum herausfinden.
@@ -224,5 +228,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
 
 
