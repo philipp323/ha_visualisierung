@@ -59,12 +59,17 @@ canvas {
   right: 0;
 }
 
+button:active{
+  background-color: #fff !important;
+}
+
 .smallButton {
   margin-right: 10px;
   margin-top: 10px;
   transition: 500ms;
   border-radius: 12px;
   border: none;
+  background-color: #80cbc4;
   color: white;
   padding: 5px 15px;
   text-align: center;
@@ -74,13 +79,31 @@ canvas {
   outline: none;
 }
 
-.smallButton:active {
+.smallButton:hover {
   margin-right: 10px;
   margin-top: 10px;
   transition: 500ms;
   border-radius: 12px;
   border: none;
-  color: white;
+  color: #80cbc4 !important;
+  background-color: #fff !important;
+  padding: 5px 17px;
+  text-align: center;
+  text-decoration: bold;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+  outline: none;
+}
+
+smallButton:focus {
+  margin-right: 10px;
+  margin-top: 10px;
+  transition: 500ms;
+  border-radius: 12px;
+  border: none;
+  color: #80cbc4 !important;
+  background-color: #fff !important;
   padding: 5px 17px;
   text-align: center;
   text-decoration: bold;
@@ -144,6 +167,10 @@ a:focus {
   border: none;
 }
 
+.btn {
+  border: 0px
+}
+
 .line {
   width: 100%;
   height: 1px;
@@ -168,7 +195,7 @@ span {
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #7386d5;
+  background: #80cbc4;
   color: #fff;
   transition: all 0.3s;
 }
@@ -225,7 +252,7 @@ span {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #6d7fcc;
+  background: #80cbc4;
 }
 
 #sidebar .sidebar-header strong {
@@ -235,7 +262,7 @@ span {
 
 #sidebar ul.components {
   padding: 20px 0;
-  border-bottom: 1px solid #47748b;
+  border-bottom: 1px solid #80cbc4;
 }
 
 #sidebar ul li a {
@@ -245,7 +272,7 @@ span {
 }
 
 #sidebar ul li a:hover {
-  color: #7386d5;
+  color: #80cbc4;
   background: #fff;
 }
 
@@ -256,7 +283,7 @@ span {
 #sidebar ul li.active > a,
 a[aria-expanded="true"] {
   color: #fff;
-  background: #6d7fcc;
+  background: #80cbc4;
 }
 
 a[data-toggle="collapse"] {
@@ -274,7 +301,7 @@ a[data-toggle="collapse"] {
 ul ul a {
   font-size: 0.9em !important;
   padding-left: 30px !important;
-  background: #6d7fcc;
+  background: #80cbc4;
 }
 
 ul.CTAs {
@@ -291,7 +318,7 @@ ul.CTAs a {
 
 a.download {
   background: #fff;
-  color: #7386d5;
+  color: rgb(69,90,100);
 }
 
 a.article,
@@ -409,5 +436,5 @@ a.article:hover {
 }
 
 .violet {
-  background-color: #7386d5;
+  background-color: #80cbc4;
 }

@@ -9,20 +9,29 @@
     <title>HA_Visualisierung</title>
 
     <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
-     <!-- jQuery CDN - Slim version (=without AJAX) -->
-     <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
-     <!-- Popper.JS -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-     <!-- Bootstrap JS -->
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+        </script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous">
+        </script>
 
     <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+        </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+        </script>
 </head>
 
 <body>
@@ -30,10 +39,20 @@
     <script src="js/OrbitControls.js"></script>
     <script src="js/dat.gui.min.js"></script>
     <script src="js/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
     <script src="js/MTLLoader.js"></script>
     <script src="js/LoaderSupport.js"></script>
     <script src="js/OBJLoader.js"></script>
+    <script src="js/own/floorSelection.js"></script>
+    <script src="js/own/movement.js"></script>
+    <script src="js/own/selectObjects.js"></script>
+    <script src="js/own/loadModel.js"></script>
+    <script src="js/own/getData.js"></script>
+    <script src="js/own/tooltip.js"></script>
+
+
+    <script src="test/threex.dynamictexture.js"></script>
 
     <div class="wrapper">
         <!-- Sidebar  -->
@@ -50,29 +69,16 @@
                     </a>
                 </li>
                 <li>
-                    <a aria-expanded="false">
-                        <input type="file" id="files" name="file" class="inputfile"/>
-                        <label for="files"><i class="fas fa-upload fa-2x"></i> Upload</label>
-                    </a>
-                </li>
-                <li>
-                    <a onclick='loadData("Room.glb")' aria-expanded="false" class="cursor" >
-                        <i class="fas fa-box-open fa-2x"></i>
-                        Room
-                    </a>
-                </li>
-                <li>
-                    <a data-target="#infopointModal" data-toggle="modal" aria-expanded="false" class="cursor" >
+                    <a data-target="#infopointModal" data-toggle="modal" aria-expanded="false" class="cursor">
                         <i class="fas fa-info-circle fa-2x"></i>
                         Infopoint
                     </a>
                 </li>
             </ul>
-            <div id="progress_bar"><div class="percent">0%</div></div>
-
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="https://github.com/philippAuinger/ha_visualisierung" class="download">GitHub - Repository</a>
+                    <a href="https://github.com/philippAuinger/ha_visualisierung" class="download">GitHub -
+                        Repository</a>
                 </li>
                 <li>
                     <a href="http://vm81.htl-leonding.ac.at:8080/projects" class="download">YouTrack - Projects</a>
@@ -80,275 +86,183 @@
             </ul>
         </nav>
 
-    <!-- Page Content  -->
-    <div id="content" class="content">  
-        <!--INFOPOINT-INFOBOX-->
-        <div id="annotation" class="annotation" style="display:none">
-        </div>
-    </div>
+        <!-- Page Content  -->
+        <div id="content" class="content">
+            <!--INFOPOINT-INFOBOX-->
+            <div id="annotation" class="annotation" style="display:none">
+            </div class="annotation">
+            <div id="tooltip" class="tooltip" style="display:none"></div>
 
-    <div class="modal fade" id="infopointModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="label">Neuen Infopoint erstellen</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form id="infopointForm">
-                    <div class="modal-body">
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label for="url" class="col-form-label">Optional Data - URL: </label>
-                            <input type="text" placeholder="http://..." class="form-control" id="url">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="name" class="col-form-label">Name: </label>
-                            <input type="text" placeholder="Schlafzimmer" class="form-control" id="name">
-                        </div>
-                            <div class="form-group col-md-6">
-                            <label for="temperature" class="col-form-label">Temperatur: </label>
-                            <input type="text" placeholder="23" class="form-control" id="temperature">
-                        </div>
-                    </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Beenden</button>
-                        <button type="submit" class="btn btn-primary violet text-white">Erstellen</button>
-                    </div>
-                </form>
+            <div class="buttons floorSelection">
+                <button type="" id="cellar" class="smallButton" onClick="floorSelect('cellar');">K</button>
+                <button type="" id="ground_floor" class="smallButton"
+                    onClick="floorSelect('ground_floor');">E</button>
+                <button type="" id="first_floor" class="smallButton"
+                    onClick="floorSelect('first_floor');">1</button>
+                <button type="" id="second_floor" class="smallButton"
+                    onClick="floorSelect('second_floor');"> 2</button>
+                <button type="" id="ceiling" class="smallButton active" active="true" onClick="floorSelect('ceiling');">
+                    A</button>
             </div>
-        </div>
-    </div>
 
-    <div class="modal fade" id="infopointVerificationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="label">Wollen Sie den Infopoint hier platzieren?</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+
+            <div class="modal fade" id="infopointModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="label">Neuen Infopoint erstellen</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form id="infopointForm">
+                            <div class="modal-body">
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="url" class="col-form-label">Optional Data - URL: </label>
+                                        <input type="text" placeholder="http://..." class="form-control" id="url">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="name" class="col-form-label">Name: </label>
+                                        <input type="text" placeholder="Schlafzimmer" class="form-control" id="name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="temperature" class="col-form-label">Temperatur: </label>
+                                        <input type="text" placeholder="23" class="form-control" id="temperature">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Beenden</button>
+                                <button type="submit" class="btn btn-primary violet text-white">Erstellen</button>
+                            </div>
+                        </form>
                     </div>
-                    <form id="infopointForm">
-                        <div class="modal-footer">
-                            <button type="submit" class="btn">Ändern</button>
-                            <button type="button" class="btn btn violet text-white" data-dismiss="modal" onclick="     
+                </div>
+            </div>
+
+            <div class="modal fade" id="infopointVerificationModal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="label">Wollen Sie den Infopoint hier platzieren?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form id="infopointForm">
+                            <div class="modal-footer">
+                                <button type="submit" class="btn">Ändern</button>
+                                <button type="button" class="btn btn violet text-white" data-dismiss="modal" onclick="     
                                 $('#infopointSuccessAlert').fadeTo(2000, 500).slideUp(500, function(){
                                    $('#infopointSuccessAlert').slideUp(500);
                                 });  
                             ">Bestätigen</button>
-                        </div>
-                    </form>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    <div class="alert alert-warning alert-dismissible right ui" id="infopointPlacingAlert">
-        <strong>Wählen sie nun eine Position am Modell aus.</strong> <br> Klicken Sie auf eine Fläche und bestätigen Sie diese Auswahl.  
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
+            <div class="alert alert-warning alert-dismissible right ui" id="infopointPlacingAlert">
+                <strong>Wählen sie nun eine Position am Modell aus.</strong> <br> Klicken Sie auf eine Fläche und
+                bestätigen
+                Sie diese Auswahl.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
 
-    <div class="alert alert-success alert-dismissible right ui" id="infopointSuccessAlert">
-        <strong>Infopoint erstellt!</strong> <br> Sie können nun mit dem Punkt interagieren.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
+            <div class="alert alert-success alert-dismissible right ui" id="infopointSuccessAlert">
+                <strong>Infopoint erstellt!</strong> <br> Sie können nun mit dem Punkt interagieren.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
 
-    <script>
-        var MODE = "NORMAL";
-        var spriteBehindObject;
-        // load a resource
-        var scene = new THREE.Scene();
-        var raycaster = new THREE.Raycaster();
-        scene.background = new THREE.Color("rgb(36, 202, 255 )");
-        var clock = new THREE.Clock();
-        var renderer = new THREE.WebGLRenderer({
-            antialias: true
-        });
-        document.getElementById("content").appendChild(renderer.domElement);
-        renderer.setSize(window.innerWidth , window.innerHeight)
-        renderer.shadowMapEnabled = true;
-		renderer.shadowMapType = THREE.PCFSoftShadowMap;
+            <script>
+                var MODE = "NORMAL";
 
-        var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 25000);
-        camera.position.set(8000, 3000, 5000);  
-        //camera.position.set(5, 2, 5);
+                var scene = new THREE.Scene();
+                scene.background = new THREE.Color("rgb(69,90,100)");
 
-        var controls = new THREE.OrbitControls(camera, renderer.domElement);
+                var hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.4);
+                hemiLight.position.set(0, 500, 0);
+                scene.add(hemiLight);
 
-        var texture = new THREE.TextureLoader().load("textures/images.jpg");
+                var dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+                dirLight.position.set(-1, 0.75, 1);
+                dirLight.position.multiplyScalar(50);
+                dirLight.name = "dirlight";
 
-         //var amlight = new THREE.AmbientLight(0xffffff, 1);
+                scene.add(dirLight);
 
-         		var hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.4);
-                    hemiLight.position.set(0, 500, 0);
-                    scene.add(hemiLight);
+                dirLight.castShadow = true;
+                dirLight.shadowMapWidth = dirLight.shadowMapHeight = 1024 * 2;
 
-                    var dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
-                    dirLight.position.set(-1, 0.75, 1);
-                    dirLight.position.multiplyScalar(50);
-                    dirLight.name = "dirlight";
-                    // dirLight.shadowCameraVisible = true;
+                var d = 300;
 
-                    scene.add(dirLight);
+                dirLight.shadowCameraLeft = -d;
+                dirLight.shadowCameraRight = d;
+                dirLight.shadowCameraTop = d;
+                dirLight.shadowCameraBottom = -d;
 
-                    dirLight.castShadow = true;
-                    dirLight.shadowMapWidth = dirLight.shadowMapHeight = 1024 * 2;
+                dirLight.shadowCameraFar = 3500;
+                dirLight.shadowBias = -0.0001;
+                dirLight.shadowDarkness = 0.35;
 
-                    var d = 300;
+                var raycaster = new THREE.Raycaster();
 
-                    dirLight.shadowCameraLeft = -d;
-                    dirLight.shadowCameraRight = d;
-                    dirLight.shadowCameraTop = d;
-                    dirLight.shadowCameraBottom = -d;
+                var clock = new THREE.Clock();
 
-                    dirLight.shadowCameraFar = 3500;
-                    dirLight.shadowBias = -0.0001;
-                    dirLight.shadowDarkness = 0.35;
+                var renderer = new THREE.WebGLRenderer({
+                    antialias: true
+                });
+                renderer.setPixelRatio(window.devicePixelRatio);
+                renderer.setSize(window.innerWidth, window.innerHeight)
+                renderer.shadowMapEnabled = true;
+                renderer.shadowMapType = THREE.PCFSoftShadowMap;
+                document.getElementById("content").appendChild(renderer.domElement);
 
-        //  amlight.castShadow = true;
-        //  amlight.shadowMapWidth = amlight.shadowMapHeight = 1024 * 2;
+                var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 25000);
+                camera.position.set(8000, 3000, 5000);
 
-        //  var d = 300;
+                var controls = new THREE.OrbitControls(camera, renderer.domElement);
+                controls.enableDamping = true;
+                controls.dampingFactor = 0.25;
+                controls.screenSpacePanning = false;
+                controls.minDistance = 10;
+                controls.maxDistance = 15000;
+                controls.maxPolarAngle = Math.PI / 2;
+                controls.rotateSpeed = 0.2;
 
-        // amlight.shadowCameraLeft = -d;
-        // amlight.shadowCameraRight = d;
-        // amlight.shadowCameraTop = d;
-        // amlight.shadowCameraBottom = -d;
+                function render() {
+                    controls.update();
+                    renderer.render(scene, camera);
+                    requestAnimationFrame(render);
+                    showTooltip();
+                }
 
-        // amlight.shadowCameraFar = 3500;
-        // amlight.shadowBias = -0.0001;
-        // amlight.shadowDarkness = 0.35;
+                render();
 
-         //scene.add(amlight);
-
-        // var dirlight = new THREE.DirectionalLight(0xffffff, 1);
-        // dirlight.position.set(8000, 3000, 5000);
-        // scene.add(dirlight);
-
-        // var spotLight = new THREE.SpotLight(0xffffff);
-		// spotLight.position.set(4000, 7000, 600);
-		// spotLight.castShadow = true;
-		// scene.add(spotLight);
-		// spotLight.shadow.mapSize.width = 1024;
-		// spotLight.shadow.mapSize.height = 1024;
-		// spotLight.shadow.camera.near = 500;
-		// spotLight.shadow.camera.far = 4000;
-		// spotLight.shadow.camera.fov = 30;
-
-        // texture.wrapS = THREE.RepeatWrapping;
-        // texture.wrapT = THREE.RepeatWrapping;
-        // texture.repeat.set(3, 2);
-
-        // var hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.4);
-        // hemiLight.position.set(0, 500, 0);
-        // scene.add(hemiLight);
-
-        // var dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
-        // dirLight.position.set(-1, 0.75, 1);
-        // dirLight.position.multiplyScalar(50);
-        // dirLight.name = "dirlight";
-        // dirLight.shadowCameraVisible = true;
-
-        // scene.add(dirLight);
-
-        // dirLight.castShadow = true;
-        // dirLight.shadowMapWidth = dirLight.shadowMapHeight = 1024 * 2;
-
-        // var d = 300;
-
-        // dirLight.shadowCameraLeft = -d;
-        // dirLight.shadowCameraRight = d;
-        // dirLight.shadowCameraTop = d;
-        // dirLight.shadowCameraBottom = -d;
-
-        // dirLight.shadowCameraFar = 3500;
-        // dirLight.shadowBias = -0.0001;
-        // dirLight.shadowDarkness = 0.35;
-
-        var modelMaterial = new THREE.MeshBasicMaterial({
-            color: 0xffffff,
-            // wireframe: true
-        });
-
-        var infopointMaterial = new THREE.MeshBasicMaterial({
-            color: 0xff0000,
-            // wireframe: true
-        });
-
-        var YOUR_CLICKABLE_OBJECTS = [];
-        var YOUR_CLICKABLE_INFOPOINTS = [];
-        var INFOPOINT_INFOS = [];
-        var SELECTED_INFOPOINT = undefined;
-        var ANNOTATION = document.querySelector(".annotation");
-
-        var loader = new THREE.GLTFLoader();
-
-        function loadData(name) {
-            loader.load(name, function (gltf) {
-                model = gltf.scene;
-                model.position.x = 0;
-                model.position.y = 0;
-                model.position.z = 0;
-                model.material = modelMaterial;
-                scene.add(model);
-                YOUR_CLICKABLE_OBJECTS.push(model);
-                console.log("added");
-            }, undefined, function (error) {
-                console.error(error);
-            });   
-        }
+                window.addEventListener('resize', onWindowResize, false);
+                content.addEventListener("mousedown", onDocumentMouseDown, false);
 
 
-            
-            // var floors = ['cellar', 'ground_floor', 'first_floor', 'second_floor', 'ceiling'];
+                function onWindowResize() {
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                }
 
-            // loadModel("model");
 
-            // function loadModel(modelName) {
-            //     var mtlLoader = new THREE.MTLLoader();
-            //     mtlLoader.setPath('models/');
-            //     var url = modelName + ".mtl";
-            //     mtlLoader.load(url, function (materials) {
+                var YOUR_CLICKABLE_OBJECTS = [];
+                var TOOLTIP = document.querySelector(".tooltip");
 
-            //         materials.preload();
-
-            //         var objLoader = new THREE.OBJLoader();
-            //         objLoader.setMaterials(materials);
-            //         objLoader.setPath('models/');
-
-            //         // var callbackOnLoad = function (event) {
-            //         //     console.log(event);
-            //         //     scene.add(event.detail.loaderRootNode);
-
-            //         // };
-            //         objLoader.load(modelName + ".obj", function (object) {
-            //             scene.add(object);
-            //             console.log(object);
-            //             //for (var i = 0; i < object.children.length; i++) {
-            //                 YOUR_CLICKABLE_OBJECTS.push(object.children[0]);
-            //                 // if (floors.includes(object.children[i].name)) {
-            //                 //     object.children[i].castShadow = true;
-            //                 // } else {
-            //                 //     object.children[i].receiveShadow = true;
-            //                 // }
-            //             //}
-
-            //             scene.traverse(function (children) {
-            //                 //objects.push(children);
-            //             });
-            //             console.log(YOUR_CLICKABLE_OBJECTS);
-            //         });
-            //     });
-            // } 
-          //  loadModel('model');
                 var objects = [];
                 var objectsUp = [];
                 var objectsUpName = [];
@@ -362,283 +276,63 @@
                 var humidity;
                 var co2;
                 var light;
+                var floorButton;
+                var mov;
+                var objectSelected;
+                var content = document.querySelector('.content');
+                var selectedRoom;
+                var white = new THREE.Color();
+                var randomColor;
+                var lastClick;
+                var position;
+                var mouse3D;
+                var mouse = new THREE.Vector2();
 
-              var manager = new THREE.LoadingManager();
-                manager.onStart = function (url, itemsLoaded, itemsTotal) {
-                    console.log(
-                        "Started loading file: " +
-                        url +
-                        ".\nLoaded " +
-                        itemsLoaded +
-                        " of " +
-                        itemsTotal +
-                        " files."
-                    );
-                };
+                var objectsData = [];
 
-                manager.onLoad = function () {
-                    roomObjects = objectArr.filter(
-                        x =>
-                            x.name[0] == "U" ||
-                            x.name[0] == "1" ||
-                            x.name[0] == "2" ||
-                            x.name[0] == "E"
-                    );
-                    floorObjects = objectArr.filter(
-                        x =>
-                            x.name[0] == "c" ||
-                            x.name[0] == "s" ||
-                            x.name[0] == "f" ||
-                            x.name[0] == "g"
-                    );
-                    console.log("Loading complete!");
-                    console.log(objectArr); 
+                loadModel();
+                getData();
 
-                    YOUR_CLICKABLE_OBJECTS.push(objectArr[73]);
+                latestMouseIntersection = undefined;
+            </script>
 
-                    console.log(YOUR_CLICKABLE_OBJECTS);
+            <script>
+                $('#infopointPlacingAlert').hide();
+                $('#infopointSuccessAlert').hide();
 
-                }
-                  var mtlLoader = new THREE.MTLLoader();
-                    mtlLoader.setPath("models/");
-                    var url = "model" + ".mtl"; //modelName
-                  mtlLoader.load(url, function (materials) {
-                        materials.preload();
 
-                        var objLoader = new THREE.OBJLoader(manager);
-                        objLoader.setMaterials(materials);
-                        objLoader.setPath("models/");
-                        objLoader.load("model" + ".obj", function (object) {
-                            scene.add(object);
-                            for (var i = 0; i < object.children.length; i++) {
-                                objectArr.push(object.children[i]);
-                                if (floors.includes(object.children[i].name)) {
-                                    object.children[i].castShadow = true;
-                                } else {
-                                    object.children[i].receiveShadow = true;
-                                }
-                            }
+                //MODAL SUBMITTED
+                $('#infopointForm').submit(function (e) {
+                    e.preventDefault();
+                    var name = $('#name').val();
+                    var url = $('#url').val();
+                    var temperature = $('#temperature').val();
 
-                            scene.traverse(function (children) {
-                                objects.push(children);
-                            });
-                        });
+                    $("#infopointModal").modal("hide");
+                    $("#infopointPlacingAlert").fadeTo(2000, 500).slideUp(500, function () {
+                        $("#infopointPlacingAlert").slideUp(500);
                     });
-                    
 
-        var infopointGeometry = new THREE.SphereGeometry( 0.1, 32, 32 );
-        var infopoint;
-        var info;
-            
-        function newInfopoint(name, url, temperature){
-            infopoint = new THREE.Mesh(infopointGeometry, infopointMaterial);
-            YOUR_CLICKABLE_INFOPOINTS.push(infopoint);
-            info = {id: infopoint.id, name: name, url: url, temp: temperature};
-            INFOPOINT_INFOS.push(info);
-        }
+                    MODE = "INFOPOINT_CREATION";
+                    newInfopoint(name, url, temperature);
+                    $('#content').on('mousedown', onDocumentMouseDown);
+                    $('#infopointForm').trigger("reset");
+                });
 
-        function updateAnnotationScreenPosition() {
-            var width = window.innerWidth,
-                height = window.innerHeight;
-            var widthHalf = width / 2,
-                heightHalf = height / 2;
-
-            // Get the 3D position and calculate the 2D position
-            var pos = new THREE.Vector3();
-            if (SELECTED_INFOPOINT != undefined) {
-                var selectedObject = scene.getObjectById(SELECTED_INFOPOINT.id, true);
-                selectedObject.getWorldPosition(pos);
-
-                pos.project(camera);
-                pos.x = (pos.x * widthHalf) + widthHalf;
-                pos.y = -(pos.y * heightHalf) + heightHalf;
-
-                // Now move the annotation to the correct position
-                ANNOTATION.style.top = `${pos.y}px`;
-                ANNOTATION.style.left = `${pos.x}px`;
-                ANNOTATION.style.opacity = spriteBehindObject ? 0.25 : 1;
-            }
-        }
+                $('#infopointVerificationModal').submit(function (e) {
+                    e.preventDefault();
+                    $('#infopointVerificationModal').modal("hide");
+                    MODE = "INFOPOINT_CREATION";
+                    $('#content').on('mousedown', onDocumentMouseDown);
+                });
 
 
-
-        //RESIZING 
-
-        window.addEventListener('resize', onWindowResize, false);
-
-        function onWindowResize() {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        }
-    </script>
-    
-    <script>
-        mouse = { x: 0, y: 0 };
-        var vector = new THREE.Vector3();
-        document.addEventListener('mousedown', onDocumentMouseDown, false);
-        var nameOfSelectedItem;
-        setTimeout(onDocumentMouseDown, 5000);
-        async function onDocumentMouseDown(event) {
-
-            event.preventDefault();
-
-            mouse.x = ((event.clientX - renderer.domElement.offsetLeft) / renderer.domElement.width) * 2 - 1;
-            mouse.y = - ((event.clientY - renderer.domElement.offsetTop) / renderer.domElement.height) * 2 + 1;
-            vector.set(mouse.x, mouse.y, 0.5);
-            vector.unproject(camera);
-            raycaster.set(camera.position, vector.sub(camera.position).normalize());
-            intersectObjects = raycaster.intersectObjects(YOUR_CLICKABLE_OBJECTS, true);
-            intersectInfopoints = raycaster.intersectObjects(YOUR_CLICKABLE_INFOPOINTS, true);
-            console.log("Entered Mouse-Down");
-            if (intersectObjects.length > 0) {
-                console.log(intersectObjects);
-                var position = intersectObjects[0].point;
-                var posX = position.x;
-                var posY = position.y;
-                var posZ = position.z;
-
-                if(MODE == "INFOPOINT_CREATION"){
-                    $('#infopointVerificationModal').modal("show");
-                    var infopoint = YOUR_CLICKABLE_INFOPOINTS[YOUR_CLICKABLE_INFOPOINTS.length - 1];
-                    infopoint.position.x = posX;
-                    infopoint.position.y = posY;
-                    infopoint.position.z = posZ;
-                    scene.add(infopoint);
-
-                    MODE = "NORMAL";
-                    $('#content').off('mousedown', onDocumentMouseDown); 
-                }
-            }
-            if(intersectInfopoints.length > 0){
-                ANNOTATION.style.display = 'initial';
-                infopoint = intersectInfopoints[0].object;
-                SELECTED_INFOPOINT = infopoint;
-                var info = INFOPOINT_INFOS.filter(obj => {
-                    return obj.id === infopoint.id
-                })
-                updateAnnotation(info[0].name, info[0].temp);
-            }
-        }
-
-        function updateAnnotation(name, temp) {
-            ANNOTATION.innerHTML = "<p><strong>" + name + "</strong></p><p>Temperatur: <br>" +
-                                            temp + " °C</p>";
-        }
-    </script>
-    
-    <script>
-        $('#infopointPlacingAlert').hide();
-        $('#infopointSuccessAlert').hide();
-        
-        
-        //MODAL SUBMITTED
-        $('#infopointForm').submit(function(e) {
-            e.preventDefault();
-            var name = $('#name').val(); 
-            var url = $('#url').val();
-            var temperature = $('#temperature').val();
-
-            $("#infopointModal").modal("hide");
-            $("#infopointPlacingAlert").fadeTo(2000, 500).slideUp(500, function(){
-               $("#infopointPlacingAlert").slideUp(500);
-            });  
-
-            MODE = "INFOPOINT_CREATION";
-            newInfopoint(name, url, temperature);
-            $('#content').on('mousedown', onDocumentMouseDown); 
-            $('#infopointForm').trigger("reset");
-        });
-
-        $('#infopointVerificationModal').submit(function (e) {
-            e.preventDefault();
-            $('#infopointVerificationModal').modal("hide");
-            MODE = "INFOPOINT_CREATION";
-            $('#content').on('mousedown', onDocumentMouseDown);
-        });
-    </script>
-
-
-    <script>
-        var reader;
-        var progress = document.querySelector('.percent');
-      
-        function abortRead() {
-          reader.abort();
-        }
-      
-        function errorHandler(evt) {
-          switch(evt.target.error.code) {
-            case evt.target.error.NOT_FOUND_ERR:
-              alert('File Not Found!');
-              break;
-            case evt.target.error.NOT_READABLE_ERR:
-              alert('File is not readable');
-              break;
-            case evt.target.error.ABORT_ERR:
-              break; // noop
-            default:
-              alert('An error occurred reading this file.');
-          };
-        }
-      
-        function updateProgress(evt) {
-          // evt is an ProgressEvent.
-          if (evt.lengthComputable) {
-            var percentLoaded = Math.round((evt.loaded / evt.total) * 100);
-            // Increase the progress bar length.
-            if (percentLoaded < 100) {
-              progress.style.width = percentLoaded + '%';
-              progress.textContent = percentLoaded + '%';
-            }
-          }
-        }
-      
-        function handleFileSelect(evt) {
-          // Reset progress indicator on new file selection.
-          progress.style.width = '0%';
-          progress.textContent = '0%';
-      
-          reader = new FileReader();
-          reader.onerror = errorHandler;
-          reader.onprogress = updateProgress;
-          reader.onabort = function(e) {
-            alert('File read cancelled');
-          };
-          reader.onloadstart = function(e) {
-            document.getElementById('progress_bar').className = 'loading';
-          };
-          reader.onload = function(e) {
-            // Ensure that the progress bar displays 100% at the end.
-            progress.style.width = '100%';
-            progress.textContent = '100%';
-            setTimeout("document.getElementById('progress_bar').className='';", 2000);
-          }
-          //save file
-          var file = document.getElementById('files').files[0];
-          loadData(file.name);
-        }
-      
-        document.getElementById('files').addEventListener('change', handleFileSelect, false);
-      </script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-
-        function render() {
-            controls.update();
-            renderer.render(scene, camera);
-            requestAnimationFrame(render);
-            updateAnnotationScreenPosition();
-            $('#content').on('mousedown', onDocumentMouseDown); 
-        }
-
-        render();
-    </script>
+                $(document).ready(function () {
+                    $('#sidebarCollapse').on('click', function () {
+                        $('#sidebar').toggleClass('active');
+                    });
+                });
+            </script>
 </body>
+
 </html>
