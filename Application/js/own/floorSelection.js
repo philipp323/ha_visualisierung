@@ -10,8 +10,12 @@
           floorButton.style.color = "white";
         }
         floorButton = document.getElementById(name);
-        floorButton.style.backgroundColor = "DodgerBlue";
-        floorButton.style.color = "white";
+        floorButton.style.backgroundColor = "white";
+        floorButton.style.color = "#80cbc4";
+
+        visableFloorName = name;
+
+        hideTooltip();
   
         // move down
         for (var i = objectsUp[0]; i <= movingIndex; i++) {
