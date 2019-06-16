@@ -50,7 +50,6 @@
     <script src="js/own/loadModel.js"></script>
     <script src="js/own/getData.js"></script>
     <script src="js/own/tooltip.js"></script>
-    <script src="test/threex.dynamictexture.js"></script>
 
     <div class="wrapper">
         <!-- Sidebar  -->
@@ -200,18 +199,17 @@
                 scene.add(dirLight);
 
                 dirLight.castShadow = true;
-                dirLight.shadowMapWidth = dirLight.shadowMapHeight = 1024 * 2;
+                dirLight.shadow.mapSize.width = dirLight.shadow.mapSize.height = 1024 * 2;
 
                 var d = 300;
 
-                dirLight.shadowCameraLeft = -d;
-                dirLight.shadowCameraRight = d;
-                dirLight.shadowCameraTop = d;
-                dirLight.shadowCameraBottom = -d;
+                dirLight.shadow.camera.left = -d;
+                dirLight.shadow.camera.right = d;
+                dirLight.shadow.camera.top = d;
+                dirLight.shadow.camera.bottom = -d;
 
-                dirLight.shadowCameraFar = 3500;
-                dirLight.shadowBias = -0.0001;
-                dirLight.shadowDarkness = 0.35;
+                dirLight.shadow.camera.far = 3500;
+                dirLight.shadow.bias = -0.0001;
 
                 var raycaster = new THREE.Raycaster();
 
@@ -222,8 +220,8 @@
                 });
                 renderer.setPixelRatio(window.devicePixelRatio);
                 renderer.setSize(window.innerWidth, window.innerHeight)
-                renderer.shadowMapEnabled = true;
-                renderer.shadowMapType = THREE.PCFSoftShadowMap;
+                renderer.shadowMap.enabled = true;
+                renderer.shadowMap.type = THREE.PCFSoftShadowMap;
                 document.getElementById("content").appendChild(renderer.domElement);
 
                 var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 25000);
@@ -248,8 +246,8 @@
                 render();
 
                 window.addEventListener('resize', onWindowResize, false);
-                content.addEventListener("mousedown", onDocumentMouseDown, false);
-                content.addEventListener('touchstart', onDocumentTouchDown, false);
+                window.top.addEventListener("mousedown", onDocumentMouseDown, false);
+                window.top.addEventListener('touchstart', onDocumentTouchDown, false);
 
 
 

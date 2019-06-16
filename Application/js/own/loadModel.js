@@ -54,5 +54,5 @@ var manager = new THREE.LoadingManager();
                         objects.push(children);
                     });
                 });
-						});
-					}
+			});
+}
