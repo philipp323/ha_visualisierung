@@ -13,6 +13,7 @@
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="snackbar.css">
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -50,6 +51,7 @@
     <script src="js/own/loadModel.js"></script>
     <script src="js/own/getData.js"></script>
     <script src="js/own/tooltip.js"></script>
+    <script src="js/own/snackBar.js"></script>
 
 
     <script src="test/threex.dynamictexture.js"></script>
@@ -95,15 +97,16 @@
 
             <div class="buttons floorSelection">
                 <button type="" id="cellar" class="smallButton" onClick="floorSelect('cellar');">K</button>
-                <button type="" id="ground_floor" class="smallButton"
-                    onClick="floorSelect('ground_floor');">E</button>
-                <button type="" id="first_floor" class="smallButton"
-                    onClick="floorSelect('first_floor');">1</button>
-                <button type="" id="second_floor" class="smallButton"
-                    onClick="floorSelect('second_floor');"> 2</button>
-                <button type="" id="ceiling" class="smallButton active" active="true" onClick="floorSelect('ceiling');">
+                <button type="" id="ground_floor" class="smallButton" onClick="floorSelect('ground_floor');">E</button>
+                <button type="" id="first_floor" class="smallButton" onClick="floorSelect('first_floor');">1</button>
+                <button type="" id="second_floor" class="smallButton" onClick="floorSelect('second_floor');"> 2</button>
+                <button type="" id="ceiling" class="smallButton active" active="true"
+                    onClick="floorSelect('ceiling');showSnackbar();">
                     A</button>
+                <!-- The actual snackbar -->
+                <div id="snackbar">Wetter: 27°C, Luftdruck: 1 bar, Luftfeuchtigk.: 25%</div>
             </div>
+
 
 
             <div class="modal fade" id="infopointModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -183,8 +186,8 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-
             <script>
+
                 var MODE = "NORMAL";
 
                 var scene = new THREE.Scene();
@@ -333,6 +336,9 @@
                     });
                 });
             </script>
+
 </body>
+
+
 
 </html>
