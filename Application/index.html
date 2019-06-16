@@ -50,8 +50,6 @@
     <script src="js/own/loadModel.js"></script>
     <script src="js/own/getData.js"></script>
     <script src="js/own/tooltip.js"></script>
-
-
     <script src="test/threex.dynamictexture.js"></script>
 
     <div class="wrapper">
@@ -94,14 +92,14 @@
             <div id="tooltip" class="tooltip" style="display:none"></div>
 
             <div class="buttons floorSelection">
-                <button type="" id="cellar" class="smallButton" onClick="floorSelect('cellar');">K</button>
+                <button type="" id="cellar" class="smallButton" onClick="floorSelect('cellar'); MODE='ROOM'">K</button>
                 <button type="" id="ground_floor" class="smallButton"
-                    onClick="floorSelect('ground_floor');">E</button>
+                    onClick="floorSelect('ground_floor'); MODE='ROOM'">E</button>
                 <button type="" id="first_floor" class="smallButton"
-                    onClick="floorSelect('first_floor');">1</button>
+                    onClick="floorSelect('first_floor'); MODE='ROOM'">1</button>
                 <button type="" id="second_floor" class="smallButton"
-                    onClick="floorSelect('second_floor');"> 2</button>
-                <button type="" id="ceiling" class="smallButton active" active="true" onClick="floorSelect('ceiling');">
+                    onClick="floorSelect('second_floor'); MODE='ROOM'"> 2</button>
+                <button type="" id="ceiling" class="smallButton active" active="true" onClick="floorSelect('ceiling'); MODE='FLOOR'">
                     A</button>
             </div>
 
@@ -185,7 +183,7 @@
             </div>
 
             <script>
-                var MODE = "NORMAL";
+                var MODE = "FLOOR";
 
                 var scene = new THREE.Scene();
                 scene.background = new THREE.Color("rgb(69,90,100)");
@@ -271,6 +269,8 @@
                 var mov;
                 var floors = ['cellar', 'ground_floor', 'first_floor', 'second_floor', 'ceiling'];
                 var objectArr = [];
+                var visableRooms;
+                var visableFloorName;
                 var mousev, raycaster, scene, renderer, controls, loader;
                 var temperature;
                 var humidity;
