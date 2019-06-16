@@ -44,3 +44,11 @@ function updateTooltip(room, temp, co , win) {
     win +
     "</p>";
 }
+
+function hideTooltip(){
+    $("#tooltip").hide();
+    if (selectedRoom != undefined) {
+      selectedRoom.material.color = white;
+    }
+    selectedRoom = undefined;
+}
