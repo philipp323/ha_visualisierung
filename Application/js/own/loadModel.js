@@ -29,8 +29,6 @@ var manager = new THREE.LoadingManager();
                 );
                 console.log("Loading complete!");
                 console.log(objectArr);
-                console.log(YOUR_CLICKABLE_OBJECTS);
-
             }
             var mtlLoader = new THREE.MTLLoader();
             mtlLoader.setPath("models/");
