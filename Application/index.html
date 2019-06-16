@@ -249,6 +249,8 @@
 
                 window.addEventListener('resize', onWindowResize, false);
                 content.addEventListener("mousedown", onDocumentMouseDown, false);
+                content.addEventListener('touchstart', onDocumentTouchDown, false);
+
 
 
                 function onWindowResize() {
@@ -285,6 +287,7 @@
                 var randomColor;
                 var lastClick;
                 var position;
+                var raycaster = new THREE.Raycaster();
                 var mouse3D;
                 var mouse = new THREE.Vector2();
 
