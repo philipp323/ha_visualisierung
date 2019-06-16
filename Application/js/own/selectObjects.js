@@ -1,13 +1,4 @@
-async function onDocumentMouseDown(event) {
-    event.preventDefault();
-
-    mouse3D = new THREE.Vector3(
-        ((event.clientX - renderer.domElement.offsetLeft) / window.innerWidth) * 2 - 1,
-        -((event.clientY - renderer.domElement.offsetTop) / window.innerHeight) * 2 + 1,
-        0.5);
-    var raycaster = new THREE.Raycaster();
-    raycaster.setFromCamera(mouse3D, camera);
-
+function filterVisableRooms(){
     var helpChar;
     if (floors[0].toString() == visableFloorName) {
       helpChar = "U";
@@ -30,14 +21,12 @@ async function onDocumentMouseDown(event) {
         x.name != floors[2] &&
         x.name != floors[3]
     );
+}
 
-    console.log(visableRooms);
-
+function handleEvents(){
     intersectObjects = raycaster.intersectObjects(visableRooms, true);
     intersectedFloors = raycaster.intersectObjects(objects, true);
 
-    //intersectInfopoints = raycaster.intersectObjects(YOUR_CLICKABLE_INFOPOINTS, true);
-    console.log("Entered Mouse-Down");
     if (intersectObjects.length > 0 && MODE == "ROOM") {
         latestMouseIntersection = intersectObjects[0].point;
 
@@ -53,8 +42,40 @@ async function onDocumentMouseDown(event) {
     if (intersectedFloors.length > 0 && MODE == "FLOOR"){
         floorName = intersectedFloors[0].object.name;
         if(floors.includes(floorName)){
-            await floorSelect(floorName);
             MODE = "ROOM";
+            floorSelect(floorName);
         }
     }
+}
+
+async function onDocumentMouseDown(event) {
+    event.preventDefault();
+
+    mouse3D = new THREE.Vector3(
+        ((event.clientX - renderer.domElement.offsetLeft) / window.innerWidth) * 2 - 1,
+        -((event.clientY - renderer.domElement.offsetTop) / window.innerHeight) * 2 + 1,
+        0.5);
+    raycaster.setFromCamera(mouse3D, camera);
+
+    filterVisableRooms();
+
+    console.log(visableRooms);
+
+    console.log("Entered Mouse-Down");
+    handleEvents();
+}
+
+async function onDocumentTouchDown(event) {
+    mouse3D = new THREE.Vector3(
+        ((event.changedTouches[0].clientX - renderer.domElement.offsetLeft) /
+        window.innerWidth) *2 - 1, -
+        ((event.changedTouches[0].clientY - renderer.domElement.offsetTop) /
+        window.innerHeight) *2 + 1, 0.5
+    );
+    raycaster.setFromCamera(mouse3D, camera);
+
+    filterVisableRooms();
+
+    console.log("Entered Touch-Down");
+    handleEvents();
 }
