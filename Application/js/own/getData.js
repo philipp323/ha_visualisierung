@@ -16,7 +16,7 @@ function getData() {
   var clientId = "" + Math.floor(Math.random() * 10000000000000001);
   var client = new Paho.MQTT.Client(
     "vm61.htl-leonding.ac.at",
-    Number(4200),
+    Number(1883),
     "" + "0b0dd00e24ca40b4a695d0d7319aea86"
   );
   client.startTrace();

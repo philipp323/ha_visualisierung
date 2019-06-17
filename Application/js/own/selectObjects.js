@@ -59,7 +59,7 @@ async function onDocumentMouseDown(event) {
 
     filterVisableRooms();
 
-    console.log(visableRooms);
+    //console.log(visableRooms);
 
     console.log("Entered Mouse-Down");
     handleEvents();
