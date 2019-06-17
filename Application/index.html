@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/snackbar.css">
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -50,6 +51,7 @@
     <script src="js/own/loadModel.js"></script>
     <script src="js/own/getData.js"></script>
     <script src="js/own/tooltip.js"></script>
+    <script src="js/own/snackBar.js"></script>
 
     <div class="wrapper">
         <!-- Sidebar  -->
@@ -98,8 +100,11 @@
                     onClick="floorSelect('first_floor'); MODE='ROOM'">1</button>
                 <button type="" id="second_floor" class="smallButton"
                     onClick="floorSelect('second_floor'); MODE='ROOM'"> 2</button>
-                <button type="" id="ceiling" class="smallButton active" active="true" onClick="floorSelect('ceiling'); MODE='FLOOR'">
+                <button type="" id="ceiling" class="smallButton active" active="true"
+                    onClick="floorSelect('ceiling'); showSnackbar(); MODE='FLOOR';">
                     A</button>
+                <!-- The actual snackbar -->
+                <div id="snackbar">Wetter: 27°C, Luftdruck: 1 bar, Luftfeuchtigk.: 25%</div>
             </div>
 
 
