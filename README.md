@@ -40,7 +40,7 @@ Unser Projekt stellt die HTL-Leonding in einem übersichtlichen Modell dar. In d
 ![alt text](Documents/architecture.png)   
 
 ## Systemdiagramm
-![alt text](Documents/Systemdiagramm.jpg)
+![alt text](Documents/Systemdiagramm.png)
 
 ## Software
 ![alt text](Documents/software.png)
