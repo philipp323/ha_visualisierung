@@ -95,6 +95,8 @@ function getData() {
       "Message Arrived:" + message.payloadString + " " + message.destinationName
     );
 
+    //JSON - to String (splitted)
+    //dann die einzelnen Values heraus parsen.
     var decoded = JSON.parse(message.payloadString.toString());
     var splittedString = message.destinationName.split("/");
     var room = splittedString[splittedString.length - 3];

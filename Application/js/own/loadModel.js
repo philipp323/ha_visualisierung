@@ -12,6 +12,7 @@ var manager = new THREE.LoadingManager();
                 );
             };
 
+            //STOCKWERKE FILTER (Vorgegeben)
             manager.onLoad = function () {
                 roomObjects = objectArr.filter(
                     x =>
