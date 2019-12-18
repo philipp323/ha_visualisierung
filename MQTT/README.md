@@ -16,7 +16,7 @@ für mehr Informationen klicken Sie [hier](https://blog.doubleslash.de/mqtt-fuer
 **URL vom MQTT-Broker**: vm61.htl-leonding.ac.at   
 **Port**: 1883   
 **Username**: 4bhif   
-**Passwort**: für Passwort bitte E-Mail an: tripicnenad@hotmail.com
+**Passwort**: für Passwort bitte E-Mail
 
 **Empfohlenes Tool**: [MQTT.fx](https://mqttfx.jensd.de/index.php/download)
 
